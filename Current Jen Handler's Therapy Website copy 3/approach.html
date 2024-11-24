@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jen Handler Psychotherapy and Psychoanalysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sharedlayout.css">
+    <link rel="stylesheet" href="css/approach.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="menu-container">
+          <!--Hamburger Button-->
+          <button class="hamburger-button">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </button>
+          <p class="menu">Menu</p>
+        </div>
+        <!--Close Button-->
+        <div class="home-container hidden">
+          <button class="close-button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- ! used to line ul up <p><a href="index.html" class="home">Home</a></p> -->
+        </div>
+        <!--Contact Button-->
+        <a href="form.html" class="contact-button">Contact</a>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu hidden">
+          <ul class="menu-items">
+            <li><a href="index.html" class="first">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li class="has-dropdown">
+              <div class="dropdown-header" onclick="toggleDropdown()">
+                <a id="clinical-services">Clinical Services <span class="arrow">^</span></a>
+              </div>
+            </li>
+            <ul id="submenu" class="submenu">
+              <li id="individual">
+                <a href="relationship-therapy.html">
+                <span id="first-span">Individual and Couples Therapy</span>
+                <span id="second-span">Individual and <br> Couples Therapy</span>
+                </a>
+              </li>
+              <li><a href="supervision.html">Clinical Supervision</a></li>
+            </ul>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Approach -->
+    <section class="approach">
+      <div class="container">
+        <div class="text-button-wrapper">
+          <div class="text">
+            <p>
+              <h2 class="title">Approach</h2>
+            </p>
+            <p>
+              I offer individual psychodynamic psychotherapy and psychoanalysis to adults who may
+              be experiencing anxiety, depression, self-doubt, and uncertainty about the direction
+              their life is heading, or who are hoping to understand more about themselves and
+            </p>
+            <p>
+              I am a licensed clinical social worker and a contemporary relational psychoanalyst.
+              I know that may sound jargony, but what it really means is that I
+              believe the relationship that you and I build together is central
+              to creating growth. In our work, I will focus on getting to know
+              you, and, with warmth, curiosity, and compassion, will try to
+              fully understand the world as you experience it. Over time, you
+              will learn more about yourself, better appreciate the choices you
+              make, and identify the patterns that keep showing up. This sense
+              of feeling understood, along with this new insight, can empower
+              you to make changes in your life and get more of the things you
+              want and fewer of the things you don’t.
+            </p>
+            <p>
+              I also work with many couples. In some ways, this process is
+              similar, but it’s also a little different. With couples, I draw on
+              both my relational psychoanalytic training and from the concepts
+              of emotionally focused therapy (EFT), which is considered the gold standard of relationship
+              therapy. We focus on the emotions that are contributing to
+              disconnection in your relationship and promote empathic connection
+              between you and your partner.
+            </p>
+            <p>
+              I strongly prefer to work with people a minimum of once a week,
+              and ideally, two or three times a week. I find that coming to
+              therapy more frequently opens up richer avenues of exploration and
+              produces faster results, but we will find an approach
+              together that is individually tailored to your goals and needs.
+            </p>
+          </div>
+          <div class="button-div">
+            <button onclick="showText()" class="text-button">Read More</button>
+          </div>
+        </div>
+        <div class="approach-image">
+            <p class="above-image">
+              <h2 class="title">Approach</h2>
+            </p>
+            <img
+              src="images/Orange-Chair-Lamp.jpg"
+              alt="Photo of Jen Handler's Orange Chair and Lamp"
+              class="image"
+            />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p class="firstp">
+        302 5th Avenue • Suite 1114 • New York • NY 10001 • (914) 933-7383 •
+        jenhandlerlcsw@gmail.com
+      </p>
+      <p class="secondp">
+        302 5th Avenue • Suite 1114 • New York NY 10001 <br />
+        (914) 933-7383 • jenhandlerlcsw@gmail.com
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

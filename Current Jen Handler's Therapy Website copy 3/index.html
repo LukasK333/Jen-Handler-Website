@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jen Handler Psychotherapy and Psychoanalysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="menu-container">
+          <!--Hamburger Button-->
+          <button class="hamburger-button">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </button>
+          <p class="menu">Menu</p>
+        </div>
+        <!--Close Button-->
+        <div class="home-container hidden">
+          <button class="close-button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <!-- ! used to line ul up <p><a href="index.html" class="home">Home</a></p> -->
+        </div>
+        <!--Contact Button-->
+        <a href="form.html" class="contact-button">Contact</a>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu hidden">
+          <ul class="menu-items">
+            <li><a href="index.html" class="first">Home</a></li>
+            <li><a href="aboutme.html" id="about-me-link">About Me</a></li>
+            <li><a href="approach.html" id="approach-link">Approach</a></li>
+            <!-- <li ><a href="#">Clinical Services</a></li> -->
+            <li class="has-dropdown">
+              <div class="dropdown-header" onclick="toggleDropdown()">
+                <a id="clinical-services"
+                  >Clinical Services <span class="arrow">^</span></a
+                >
+              </div>
+            </li>
+            <ul id="submenu" class="submenu">
+              <li id="individual">
+                <a href="relationship-therapy.html">
+                  <span id="first-span">Individual and Couples Therapy</span>
+                  <span id="second-span">Individual and <br> Couples Therapy</span>
+                </a>
+              </li>
+              <li><a href="supervision.html">Clinical Supervision</a></li>
+            </ul>
+            <li id="contact"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <img
+          class="transparent-couch"
+          src="images/Couch.png"
+          alt="couch-background-image"
+        />
+        <div class="hero-content">
+          <h1 class="hero-heading">
+            <span>Jen Handler</span><br />
+            Psychotherapy &amp; <br />
+            Contemporary Psychoanalysis
+          </h1>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p class="firstp">
+        302 5th Avenue • Suite 1114 • New York • NY 10001 • (914) 933-7383 •
+        jenhandlerlcsw@gmail.com
+      </p>
+      <p class="secondp">
+        302 5th Avenue • Suite 1114 • New York NY 10001 <br />
+        (914) 933-7383 • jenhandlerlcsw@gmail.com
+      </p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
