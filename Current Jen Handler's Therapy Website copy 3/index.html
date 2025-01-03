@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jen Handler Psychotherapy and Psychoanalysis</title>
+    <title>Jen Handler Psychotherapy & Psychoanalysis</title>
+    
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="Hello there! My name is Jen Handler and I offer psychotherapy and psychoanalysis to individuals and couples based in New York City. " />
+    <meta name="keywords" content="psychotherapy, psychoanalysis, LGBTQIA+ therapy, New York therapy, relationship counseling, couples therapy, clinical supervision"/>
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Jen Handler, LCSW" />
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="New York City" />
+    <link rel="canonical" href="https://yourwebsite.com/relationship-therapy" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jen Handler Psychotherapy & Psychoanalysis"/>
+    <meta property="og:description" content="Hello there! My name is Jen Handler and I offer psychotherapy and psychoanalysis to individuals and couples based in New York City."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://jenhandlernyc.com"/>
+    <meta property="og:image" content="https://jenhandlernyc.com/images/Couch.png"/>
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Jen Handler Psychotherapy & Psychoanalysis"/>
+    <meta name="twitter:description" content="Hello there! My name is Jen Handler and I offer psychotherapy and psychoanalysis to individuals and couples based in New York City. "/>
+    <meta name="twitter:image" content="https://jenhandlernyc.com/images/Couch.png"/>
+
+    <!-- Schema for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Jen Handler Psychotherapy & Psychoanalysis",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "302 5th Avenue, Suite 1114",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10001"
+        }
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,75 +50,76 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="menu-container">
-          <!--Hamburger Button-->
-          <button class="hamburger-button">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-          </button>
-          <p class="menu">Menu</p>
-        </div>
-        <!--Close Button-->
-        <div class="home-container hidden">
-          <button class="close-button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!--Contact Button-->
-        <a href="form.html" class="contact-button">Contact</a>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu hidden">
-          <ul class="menu-items">
-            <li><a href="index.html" class="first">Home</a></li>
-            <li><a href="aboutme.html" id="about-me-link">About Me</a></li>
-            <li><a href="approach.html" id="approach-link">Approach</a></li>
-            <li class="has-dropdown">
-              <div class="dropdown-header" onclick="toggleDropdown()">
-                <a id="clinical-services"
-                  >Clinical Services <span class="arrow">^</span></a
-                >
-              </div>
-            </li>
-            <ul id="submenu" class="submenu">
-              <li id="individual">
-                <a href="relationship-therapy.html">
-                  <span id="first-span">Individual and Couples Therapy</span>
-                  <span id="second-span"
-                    >Individual and <br />
-                    Couples Therapy</span
-                  >
-                </a>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="container">
+          <div class="menu-container">
+            <!--Hamburger Button-->
+            <button class="hamburger-button" aria-label="Open menu" area-expanded="false">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+            </button>
+            <p class="menu">Menu</p>
+          </div>
+          <!--Close Button-->
+          <div class="home-container hidden">
+            <button class="close-button" area-label="Close menu">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!--Contact Button-->
+          <a href="form.html" class="contact-button">Contact</a>
+          <!-- Hamburger Menu -->
+          <div class="hamburger-menu hidden" role="menu" aria-hidden="true">
+            <ul class="menu-items" role="menubar">
+              <li role="menuitem"><a href="index.html" class="first">Home</a></li>
+              <li role="menuitem"><a href="aboutme.html" id="about-me-link">About Me</a></li>
+              <li role="menuitem"><a href="approach.html" id="approach-link">Approach</a></li>
+              <li role="menuitem" class="has-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown()">
+                  <a href="#" id="clinical-services" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+                  Clinical Services <span class="arrow" aria-hidden="true">^</span>
+                  </a>
+                </div>
               </li>
-              <li><a href="supervision.html">Clinical Supervision</a></li>
+              <ul id="submenu" class="submenu">
+                <li id="individual">
+                  <a href="relationship-therapy.html">
+                    <span id="first-span">Individuals and Couples</span>
+                  </a>
+                </li>
+                <li><a href="supervision.html">Clinical Supervision</a></li>
+              </ul>
+              <li id="contact"><a href="contact.html">Contact</a></li>
             </ul>
-            <li id="contact"><a href="contact.html">Contact</a></li>
-          </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <img
-          class="transparent-couch"
-          src="images/Couch.png"
-          alt="couch-background-image"
-        />
-        <div class="hero-content">
-          <h1 class="hero-heading">
-            <span>Jen Handler</span><br />
-            Psychotherapy &amp; <br />
-            Contemporary Psychoanalysis
-          </h1>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <img 
+          class="transparent-couch" 
+          src="images/Couch.png" 
+          alt="Professional therapy office with comfortable couch in New York" 
+          />
+          <div class="hero-content">
+            <h1 class="hero-heading">
+              <span>Jen Handler</span><br />
+              Psychotherapy &amp; <br />
+              Contemporary Psychoanalysis
+            </h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <!-- Footer -->
     <footer>
       <p class="firstp">

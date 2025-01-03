@@ -1,3 +1,7 @@
+.hero {
+    scroll-behavior: smooth;
+}
+
 .hero .container .hero-content .paragraph-container .relationship-image {
     max-width: 500px;
     width: 100%;

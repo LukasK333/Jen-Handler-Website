@@ -1,3 +1,10 @@
+/* 
+* Main stylesheet for Jen Handler's Therapy Website.
+* Author: Lukas Kennedy
+* Version: 1.0
+* Description: Styles for responsive layout, navigation, and core components
+*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,8 +22,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: url(../images/Blank-Wall.png);
+    background: url(../images/Blank-Wall.png) no-repeat;
     background-size: 100% 300%; /* Put here instead of .hero section so that it covers both .hero and .aboutme sections in aboutme.html */
+    background-color: #fff; /* Fallback */
 }
 
 a {
@@ -60,6 +68,7 @@ img {
 /* Menu container */
 .navbar .container .menu-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-left: 1.5em;
     z-index: 100;
@@ -219,9 +228,9 @@ img {
 }
 
 /* Hero */
-.hero {
+main, .hero {
     flex-grow: 1;
-    display: flex;
+    display: flex; 
     overflow: hidden; /*shrinks image2 to fit perfectly inside its contianer*/
 }
 
@@ -263,6 +272,7 @@ img {
 footer {
     background: var(--primary-color);
     display: flex; 
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-grow: 1.5; 
@@ -408,19 +418,9 @@ p a {
     .hero .container .hero-content .hero-heading {
         font-size: 1.5em;
     }
-    
-}
-
-@media (max-width: 400px) {
-    .navbar .container .hamburger-menu .menu-items .submenu #individual #first-span {
-        display: none;
-    }
-    
-    .navbar .container .hamburger-menu .menu-items .submenu #individual #second-span {
-        display: block;
-    }
 
     footer .secondp {
         font-size: 0.8em;
     }
+    
 }

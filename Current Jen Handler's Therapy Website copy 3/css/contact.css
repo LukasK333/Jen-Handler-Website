@@ -33,16 +33,12 @@
 }
 
 
-.hero .container .contact-info p {
+.hero .container .text p {
     margin-top: 0.5em;
 }
-.hero .container .call-to-action {
+.hero .container .text .call-to-action {
     margin-top: 2em;
-}
-
-.hero .container .call-to-action p {
     text-decoration: underline;
-    /* margin-top: 0.5em; */
 }
 
 .hero .container .call-to-action :first-child {
