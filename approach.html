@@ -3,7 +3,89 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jen Handler Psychotherapy and Psychoanalysis</title>
+    <title>Approach</title>
+
+    <!-- Enhanced Meta Tags -->
+    <meta name="description" content="As we build a relationship together, I’ll endeavor to understand the world as you experience it, and help you improve it for the better.">
+    <meta name="keywords" content="psychodynamic therapy NYC, psychoanalysis, relationship therapy, EFT therapy, couples counseling, anxiety therapy, depression treatment">
+    <meta name="author" content="Jen Handler, LCSW">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Therapeutic Approach | Jen Handler, LCSW">
+    <meta property="og:description" content="As we build a relationship together, I’ll endeavor to understand the world as you experience it, and help you improve it for the better.">
+    <meta property="og:image" content="images/Orange-Chair-Lamp.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/approach.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Therapeutic Approach | Jen Handler, LCSW">
+    <meta name="twitter:description" content="As we build a relationship together, I’ll endeavor to understand the world as you experience it, and help you improve it for the better">
+    <meta name="twitter:image" content="images/Orange-Chair-Lamp.jpg">
+
+    <!-- Schema for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Jen Handler Psychotherapy",
+        "image": "images/Orange-Chair-Lamp.jpg",
+        "description": "Individual psychodynamic psychotherapy, psychoanalysis, and couples therapy in NYC. Specializing in anxiety, depression, and relationship dynamics using contemporary relational approaches and EFT.",
+        "@id": "https://yourwebsite.com/approach",
+        "url": "https://yourwebsite.com/approach",
+        "telephone": "(914) 933-7383",
+        "email": "jenhandlerlcsw@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "302 5th Avenue, Suite 1114",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10001",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.7466,
+          "longitude": -73.9857
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ]
+        },
+        "sameAs": [
+          "YOUR_LINKEDIN_URL",
+          "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
+          "https://zencare.co/provider/therapist/jen-handler"
+        ],
+        "priceRange": "$$",
+        "medicalSpecialty": [
+          "Psychotherapy",
+          "Psychoanalysis",
+          "Couples Therapy"
+        ],
+        "availableService": [
+          {
+            "@type": "MedicalTherapy",
+            "name": "Individual Psychodynamic Psychotherapy",
+            "description": "Contemporary relational psychoanalytic approach for self-discovery to make postive change"
+          },
+          {
+            "@type": "MedicalTherapy",
+            "name": "Couples Therapy",
+            "description": "Emotionally focused therapy (EFT) for romantic and familial relationships"
+          }
+        ]
+      }
+      </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,63 +98,65 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="menu-container">
-          <!--Hamburger Button-->
-          <button class="hamburger-button">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-          </button>
-          <p class="menu">Menu</p>
-        </div>
-        <!--Close Button-->
-        <div class="home-container hidden">
-          <button class="close-button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <!-- ! used to line ul up <p><a href="index.html" class="home">Home</a></p> -->
-        </div>
-        <!--Contact Button-->
-        <a href="form.html" class="contact-button">Contact</a>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu hidden">
-          <ul class="menu-items">
-            <li><a href="index.html" class="first">Home</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="approach.html">Approach</a></li>
-            <li class="has-dropdown">
-              <div class="dropdown-header" onclick="toggleDropdown()">
-                <a id="clinical-services">Clinical Services <span class="arrow">^</span></a>
-              </div>
-            </li>
-            <ul id="submenu" class="submenu">
-              <li id="individual">
-                <a href="relationship-therapy.html">
-                <span id="first-span">Individual and Couples Therapy</span>
-                <span id="second-span">Individual and <br> Couples Therapy</span>
-                </a>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="menu-container">
+            <!--Hamburger Button-->
+            <button class="hamburger-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-menu">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+            </button>
+            <p class="menu">Menu</p>
+          </div>
+          <!--Close Button-->
+          <div class="home-container hidden">
+            <button class="close-button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Hamburger Menu -->
+          <div class="hamburger-menu hidden" role="menu" aria-hidden="true" aria-labeledby="hamburger-button">
+            <ul class="menu-items">
+              <li role="menuitem"><a href="index.html" class="first">Home</a></li>
+              <li role="menuitem"><a href="aboutme.html">About Me</a></li>
+              <li role="menuitem"><a href="approach.html">Approach</a></li>
+              <li role="menuitem" class="has-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown()">
+                  <a href="#" id="clinical-services" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+                   Clinical Services <span class="arrow" aria-hidden="true">^</span>
+                  </a>
+                </div>
               </li>
-              <li><a href="supervision.html">Clinical Supervision</a></li>
+              <ul id="submenu" class="submenu">
+                <li id="individual">
+                  <a href="relationship-therapy.html">
+                  <span id="first-span">Individuals and Couples</span>
+                  </a>
+                </li>
+                <li><a href="supervision.html">Clinical Supervision</a></li>
+              </ul>
+              <li role="menuitem"><a href="contact.html">Contact Page</a></li>
             </ul>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+          </div>
+          <!--Contact Button-->
+          <a href="form.html" class="contact-button">Contact</a>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- Approach -->
-    <section class="approach">
+    <article class="approach">
       <div class="container">
         <div class="text-button-wrapper">
           <div class="text">
             <p>
-              <h2 class="title">Approach</h2>
+              <h1 class="title">Approach</h1>
             </p>
             <p>
               I offer individual psychodynamic psychotherapy and psychoanalysis to adults who may
               be experiencing anxiety, depression, self-doubt, and uncertainty about the direction
-              their life is heading, or who are hoping to understand more about themselves and
+              their life is heading, or who are hoping to understand more about themselves.
             </p>
             <p>
               I am a licensed clinical social worker and a contemporary relational psychoanalyst.
@@ -114,12 +198,12 @@
             </p>
             <img
               src="images/Orange-Chair-Lamp.jpg"
-              alt="Photo of Jen Handler's Orange Chair and Lamp"
+              alt="Warm therapeutic space with modern orange chair against a navy blue wall, washed with the yellow light of a hanging lamp"
               class="image"
             />
         </div>
       </div>
-    </section>
+    </article>
     <!-- Footer -->
     <footer>
       <p class="firstp">

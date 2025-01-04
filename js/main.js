@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () { 
     const menuContainer = document.querySelector('.menu-container');
+    const hamburgerButton = menuContainer.firstElementChild;
     const homeContainer = document.querySelector('.home-container');
+    const closeButton = homeContainer.firstElementChild;
     const hamburgerMenu = document.querySelector('.hamburger-menu');
 
     menuContainer.addEventListener('click', () => {
+        hamburgerButton.setAttribute('aria-expanded', 'true');
+        closeButton.setAttribute('aria-expanded', 'true');
+        menuContainer.classList.add('hidden');
         homeContainer.classList.remove('hidden');
         hamburgerMenu.classList.remove('hidden');
-        menuContainer.classList.add('hidden');
+        hamburgerMenu.setAttribute('aria-hidden', 'false');
     })
 
     homeContainer.addEventListener('click', () => {
+        hamburgerButton.setAttribute('aria-expanded', 'false');
+        closeButton.setAttribute('aria-expanded', 'false');
         menuContainer.classList.remove('hidden');
         homeContainer.classList.add('hidden');
         hamburgerMenu.classList.add('hidden');
+        hamburgerMenu.setAttribute('aria-hidden', 'true');
     })
 
     // Get all navigation links on navBar
@@ -54,9 +62,11 @@ function toggleDropdown() {
         const submenuHeight = submenu.offsetHeight;
         const currentMenuHeight = hamburgerMenu.offsetHeight;
         const newMenuHeight = currentMenuHeight + submenuHeight;
+        clinicalServicesLink.setAttribute('aria-expanded', 'true');
         
         hamburgerMenu.style.height = newMenuHeight + 'px';
     } else {
+        clinicalServicesLink.setAttribute('aria-expanded', 'false');
         hamburgerMenu.style.height = '';
         contactLink.style.marginTop = '';
     }
