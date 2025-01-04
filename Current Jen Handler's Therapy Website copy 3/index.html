@@ -59,7 +59,7 @@
         <div class="container">
           <div class="menu-container">
             <!--Hamburger Button-->
-            <button class="hamburger-button" aria-label="Open menu" area-expanded="false">
+            <button class="hamburger-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-menu">
               <div class="hamburger-line"></div>
               <div class="hamburger-line"></div>
               <div class="hamburger-line"></div>
@@ -68,14 +68,12 @@
           </div>
           <!--Close Button-->
           <div class="home-container hidden">
-            <button class="close-button" area-label="Close menu">
+            <button class="close-button" aria-label="Close menu" aria-expanded="true">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button> 
           </div>
-          <!--Contact Button-->
-          <a href="form.html" class="contact-button">Contact</a>
           <!-- Hamburger Menu -->
-          <div class="hamburger-menu hidden" role="menu" aria-hidden="true">
+          <div class="hamburger-menu hidden" role="menu" aria-hidden="true" aria-labeledby="hamburger-button">
             <ul class="menu-items" role="menubar">
               <li role="menuitem"><a href="index.html" class="first">Home</a></li>
               <li role="menuitem"><a href="aboutme.html" id="about-me-link">About Me</a></li>
@@ -95,9 +93,11 @@
                 </li>
                 <li><a href="supervision.html">Clinical Supervision</a></li>
               </ul>
-              <li id="contact"><a href="contact.html">Contact</a></li>
+              <li id="contact"><a href="contact.html">Contact Page</a></li>
             </ul>
           </div>
+          <!--Contact Button-->
+          <a href="form.html" class="contact-button">Contact</a>
         </div>
       </nav>
     </header>

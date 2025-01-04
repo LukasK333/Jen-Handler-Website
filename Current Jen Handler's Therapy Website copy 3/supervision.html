@@ -95,7 +95,7 @@
       <div class="container">
         <div class="menu-container">
           <!--Hamburger Button-->
-          <button class="hamburger-button">
+          <button class="hamburger-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-menu">
             <div class="hamburger-line"></div>
             <div class="hamburger-line"></div>
             <div class="hamburger-line"></div>
@@ -108,17 +108,17 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <!--Contact Button-->
-        <a href="form.html" class="contact-button">Contact</a>
         <!-- Hamburger Menu -->
-        <div class="hamburger-menu hidden">
+        <div class="hamburger-menu hidden" role="menu" aria-hidden="true" aria-labeledby="hamburger-button">
           <ul class="menu-items">
             <li><a href="index.html" class="first">Home</a></li>
             <li><a href="aboutme.html" id="about-me-link">About Me</a></li>
             <li><a href="approach.html" id="approach-link">Approach</a></li>
-            <li class="has-dropdown">
+            <li role="menuitem" class="has-dropdown">
               <div class="dropdown-header" onclick="toggleDropdown()">
-                <a id="clinical-services">Clinical Services <span class="arrow">^</span></a>
+                <a href="#" id="clinical-services" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+                 Clinical Services <span class="arrow" aria-hidden="true">^</span>
+                </a>
               </div>
             </li>
             <ul id="submenu" class="submenu">
@@ -129,9 +129,11 @@
               </li>
               <li><a href="supervision.html">Clinical Supervision</a></li>
             </ul>
-            <li id="contact"><a href="contact.html">Contact</a></li>
+            <li id="contact"><a href="contact.html">Contact Page</a></li>
           </ul>
         </div>
+        <!--Contact Button-->
+        <a href="form.html" class="contact-button">Contact</a>
       </div>
     </nav>
     <main>
