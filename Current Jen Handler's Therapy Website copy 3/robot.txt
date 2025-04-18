@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /formconfirmation.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+Sitemap: https://yourwebsite.com/sitemap.xml

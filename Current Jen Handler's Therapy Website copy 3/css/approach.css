@@ -1,0 +1,117 @@
+.approach {
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-grow: 1;
+    scroll-behavior: smooth;
+}
+
+.approach .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.approach .container .approach-image {
+    display: flex;
+    flex-direction: column;
+    max-width: 315px;
+    padding-right: 1em;
+    margin: 5em auto 0em auto;
+}
+
+.approach .container .approach-image .title {
+    display: none;
+    font-size: 2.5em;
+}
+
+.approach .container .text-button-wrapper .text {
+    padding-left: 1.25em;
+}
+
+.approach .container .text-button-wrapper .text .title {
+    font-size: 1.6em;
+}
+
+@media (max-width: 760px) {
+
+    .approach .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .approach .container .approach-image {
+        text-align: center;
+        margin: 0em;
+        padding: 1em 1em 0em 1em;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .approach .container .text-button-wrapper .text {
+        min-height: 2em;
+        text-align: left;
+        padding: 0em 0em 1em 1em;
+        margin: 0em;
+    }
+
+    .approach .container .text-button-wrapper .text .title {
+        display: none;
+        font-size: 2.5em;
+    }
+
+    .approach .container .approach-image .title {
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+    .approach .container .approach-image .title {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .approach .container .approach-image {
+        margin: 0 auto;
+        max-width: 270px;
+    }
+    .approach .container .text-button-wrapper .text {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 550px) {
+    .approach .container .approach-image .title {
+        font-size: 1.75em;
+    }
+
+    .approach .container .approach-image {
+        margin: 0 auto;
+        max-width: 250px;
+    }
+    .approach .container .text-button-wrapper .text {
+        font-size: 1.25em;
+    }
+}
+
+/**
+* undoing the navbar styling of style.css below 480px 
+* this way menu-container and contact-button keep the same size and margins below 480px
+*/
+@media (max-width: 480px) { 
+    .navbar .container .menu-container {
+        margin-left: 1.5em;
+    }
+
+    .navbar .container .menu-container .menu {
+        font-size: 1.25em;
+    }
+    
+    .navbar .container .menu-container .hamburger-button .hamburger-line {
+        width: 2.3em;
+        height: 0.425em;
+    }
+
+    .navbar .container .contact-button {
+        font-size: 1.2em;
+        margin-right: 1em;
+    }
+}
