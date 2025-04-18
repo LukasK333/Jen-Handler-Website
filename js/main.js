@@ -121,4 +121,3 @@ window.addEventListener('load', adjustTextHeight);
 
 // Call the function when the window is resized
 window.addEventListener('resize', adjustTextHeight);
-

@@ -242,6 +242,17 @@ main, .hero {
     display: flex;
 }
 
+.hero .container .zencarebadge {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 250px; 
+    height: 150px;
+    border: none;
+    z-index: 5;
+}
+
 .hero .container .transparent-couch { 
     position: relative; /*image gives the container its width, and is relative to its parent container*/
     bottom: 0;
@@ -301,9 +312,20 @@ p a {
     .navbar .hamburger-menu {
         border-radius: 0px 0px 30px 30px;
     }
+
 }
 
 @media (max-width: 1100px) {
+    .hero .container .zencarebadge {
+        display: none;
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 250px; 
+        height: 150px;
+        border: none;
+    }
+
     .navbar .hamburger-menu {
         width: 98%;
         height: 100%;

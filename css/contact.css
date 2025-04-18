@@ -2,6 +2,13 @@
     flex-grow: 1;
     min-height: calc(100vh - 5.3em - 3em); /* Subtracting navbar and footer heights */
     overflow-y: auto;
+    position: relative;
+}
+
+.hero .headshot {
+    position: absolute;
+    width: 130px;
+    height: auto;
 }
 
 .hero .container {
@@ -48,6 +55,7 @@
 }
 
 @media (min-width: 1240px) {
+
     .hero .container {
         display: flex;
         flex-direction: row;
@@ -57,13 +65,20 @@
     }
 }
 
+@media (max-width: 1400px) {
+    .hero .headshot {
+        display: none;
+    }
+}
+
 @media(max-width: 1000px) {
+    
     .hero .container {
         display: flex;
         flex-direction: column;
     }
     .hero .container .text {
-        margin: 4em auto;
+        margin: 2em auto;
     }
     .hero .container .zoomable-map {
         display: flex;
