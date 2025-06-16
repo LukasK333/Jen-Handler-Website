@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,7 +29,6 @@
     <meta name="twitter:creator" content="@YourTwitterHandle" />
 
     <!-- Schema for SEO -->
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -92,85 +90,96 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="menu-container">
-          <!--Hamburger Button-->
-          <button class="hamburger-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-menu">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-          </button>
-          <p class="menu">Menu</p>
-        </div>
-        <!--Close Button-->
-        <div class="home-container hidden">
-          <button class="close-button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu hidden" role="menu" aria-hidden="true" aria-labeledby="hamburger-button">
-          <ul class="menu-items">
-            <li role="menuitem"><a href="index.html" class="first">Home</a></li>
-            <li role="menuitem"><a href="aboutme.html" id="about-me-link">About Me</a></li>
-            <li role="menuitem"><a href="approach.html" id="approach-link">Approach</a></li>
-            <li role="menuitem" class="has-dropdown">
-              <div class="dropdown-header" onclick="toggleDropdown()">
-                <a href="#" id="clinical-services" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
-                 Clinical Services <span class="arrow" aria-hidden="true">^</span>
-                </a>
-              </div>
-            </li>
-            <ul id="submenu" class="submenu">
-              <li id="individual">
-                <a href="relationship-therapy.html">
-                  <span id="first-span">Individuals and Couples</span>
-                </a>
-              </li>
-              <li><a href="supervision.html">Clinical Supervision</a></li>
-            </ul>
-            <li role="menuitem" id="contact"><a href="contact.html">Contact Page</a></li>
-          </ul>
-        </div>
-        <!--Contact Button-->
-        <a href="form.html" class="contact-button">Contact</a>
-      </div>
-    </nav>
-    <main>
-      <!-- Hero section remains the same -->
-      <section class="hero">
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-heading">
-              <span class="title">Individual and Couples Therapy</span>
-            </h1>
-            <article class="service-description">
-              <div class="paragraph-container">
-                <img src="images/diagonalbluecouch.jpg" alt="Professional therapy office in New York with comfortable blue couch for individual and couples counseling" class="relationship-image">
-
-                <section class="therapy-services">
-                  <p>I offer <a href="approach.html">individual psychodynamic psychotherapy and psychoanalysis</a> as well as <a href="approach.html">couples therapy</a>.</p>
-                </section>
-    
-                <section class="consultation-process">
-                  <p>Before we start working together, we will schedule an initial consultation. During this process (over one or more 60-minute sessions), we will talk about your treatment goals and give us a chance to learn more about each other.</p>
-                </section>
-    
-                <section class="pricing-information">
-                  <p>For individual sessions, my Initial consultation fee is $300. My ongoing treatment fee is $250 for a 45-minute session. For couples, my consultation fee and ongoing treatment fee is $300 for a 60-minute session. In certain instances, a sliding scale fee may be available.</p>
-                  <p>I am happy to provide all necessary documentation for out of network reimbursement from your health insurance.</p>
-                </section>
-    
-                <section class="contact-info">
-                  <p>If you would like to learn more about how I work or to set up a brief 10-minute consultation, please feel free to <a href="form.html">contact me</a>.</p>
-                </section>
-              </div>
-            </article>
+          <div class="menu-container">
+            <!--Hamburger Button-->
+            <button class="hamburger-button" aria-label="Open menu" aria-expanded="false" aria-controls="hamburger-menu">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+            </button>
+            <p class="menu">Menu</p>
+          </div>
+          <!--Close Button-->
+          <div class="home-container hidden">
+            <button class="close-button" aria-label="Close menu" aria-expanded="true">
+              <span aria-hidden="true">&times;</span>
+            </button> 
+          </div>
+          <!-- Hamburger Menu -->
+          <div class="hamburger-menu hidden" aria-hidden="true" aria-labeledby="hamburger-button">
+            <ul class="menu-items" role="menubar">
+              <li role="menuitem"><a href="index.html" class="first">Home</a></li>
+                <li role="menuitem"><a href="aboutme.html" id="about-me-link">About Me</a></li>
+                <li role="menuitem"><a href="approach.html" id="approach-link">Approach</a></li>
+                <li role="menuitem" class="has-dropdown">
+                  <div class="dropdown-header" onclick="toggleDropdown()">
+                    <a href="#" id="clinical-services" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+                    Clinical Services <span class="arrow" aria-hidden="true">^</span>
+                    </a>
+                  </div>
+                </li>
+                <ul id="submenu" class="submenu">
+                  <li id="individual">
+                    <a href="relationship-therapy.html">
+                      <span id="first-span">Individual and Couples / Relationship Therapy</span>
+                      <span id="second-span"> Individual and Couples / Relationship Therapy</span>
+                    </a>
+                  </li>
+                  <li><a href="supervision.html">Clinical Supervision</a></li>
+                </ul>
+              <li role="menuitem" id="contact"><a href="contact.html">Contact Page</a></li>
+            </ul>
+          </div>
+          <!--Contact Button-->
+          <a href="form.html" class="contact-button">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading">
+            <span id="first-span">Individual and Couples / Relationship Therapy</span>
+            <span id="second-span">Individual and Couples / <br> Relationship Therapy</span>
+          </h1>
+          <div class="text-button-wrapper">
+            <div class="paragraph-container text">
+              <img src="images/diagonalbluecouch.jpg" alt="Photo of Jen Handler's Office" class="relationship-image">
+              <p>
+                  I offer <a href="approach.html"></a>individual psychodynamic psychotherapy and psychoanalysis 
+                  as well as <a href="approach.html">couples/relationship therapy</a>.
+              </p>
+              <p>
+                  Before we start working together, we will schedule an initial consultation. During this
+                  process (over one or more 60-minute sessions), we will talk about your treatment goals
+                  and give us a chance to learn more about each other.
+              </p>
+              <p>
+                  For individual sessions, my initial consultation fee is $300. My ongoing treatment fee is
+                  $250 for a 45-minute session. For couples, my consultation fee and ongoing treatment
+                  fee is $300 for a 60-minute session. In certain instances, a sliding scale fee may be
+                  available.
+              </p>
+              <p>
+                  I am happy to provide all necessary documentation for out of network reimbursement
+                  from your health insurance.
+              </p>
+              <p>
+                  If you would like to learn more about how I work or to set up a brief 10-minute
+                  consultation, please feel free to <a href="form.html">contact me</a>.
+              </p>
+            </div>
+            <div class="button-div">
+              <button onclick="showRelationshipText()" class="text-button">Read More</button>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
     <!-- Footer -->
     <footer>
       <p class="firstp">

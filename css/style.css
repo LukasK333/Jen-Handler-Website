@@ -1,10 +1,3 @@
-/* 
-* Main stylesheet for Jen Handler's Therapy Website.
-* Author: Lukas Kennedy
-* Version: 1.0
-* Description: Styles for responsive layout, navigation, and core components
-*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +7,6 @@
 :root {
     --primary-color: #d8805b;
     --dark-gray-color: #7f7f7f;
-    --text-color: #636363;
 }
 
 body {
@@ -22,9 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: url(../images/Blank-Wall.png) no-repeat;
+    background: url(../images/Blank-Wall.png);
     background-size: 100% 300%; /* Put here instead of .hero section so that it covers both .hero and .aboutme sections in aboutme.html */
-    background-color: #fff; /* Fallback */
 }
 
 a {
@@ -41,17 +32,17 @@ img {
 
 /* Navbar */
 .navbar {
+    /* border: 3px solid gold; */
     background: var(--dark-gray-color);
 }
 
 .navbar .container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     max-width: 1440px;
-    min-height: 5.3em;
     margin: 0 auto;
+    min-height: 5.3em;
 }
 
 .navbar .container .contact-button {
@@ -62,13 +53,35 @@ img {
     padding: 0.33em 0.4em;
     border-radius: 4.4em;
     cursor: pointer;
+    text-decoration: none;
     margin-right: 1em;
+}
+
+/* Zencare and Psychology Today Badges */
+
+.navbar .container .badges {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Lower than hamburger menu (z-index: 10) but higher than default*/
+    pointer-events: auto; /* Ensure it doesn't interfere with other elements */
+    display: flex;
+    align-items: center;
+}
+.navbar .container .badges .zencare-badge {
+    width: 250px; 
+    height: 73.32px; 
+    transform: scale(0.7);
+    border: none;
+    display: block;
+    /* Ensure it maintains its position */
+    position: relative;
+    z-index: 5;
 }
 
 /* Menu container */
 .navbar .container .menu-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-left: 1.5em;
     z-index: 100;
@@ -88,6 +101,10 @@ img {
     border: none;
     cursor: pointer;
 }
+
+/* .navbar .container .menu-container .hamburger-button.inactive {
+    display: none
+}; */
 
 .navbar .container .menu-container .hamburger-button .hamburger-line {
     width: 2.8em;
@@ -115,7 +132,7 @@ img {
     border: none;
     background: none;
     line-height: 1; 
-    font-size: 4.5em; 
+    font-size: 4.5em; /* As opposed to 2.8 em */
 }
 
 /* Hamburger Menu */
@@ -131,6 +148,7 @@ img {
 }
 
 .navbar .hamburger-menu .menu-items {
+    /* height: 90%; */
     margin-top: 1.3em;
     margin-left: 0.105em;
     display: flex;
@@ -139,6 +157,8 @@ img {
     align-items: center;
     font-weight: 600;
     font-size: 1.38em;
+    /* Add a transition for menu items height on toggleDropdown() */
+    /* transition: height 0.3s ease-in-out; */
 }
 
 .navbar .hamburger-menu .menu-items > li {
@@ -151,6 +171,10 @@ img {
 
 .navbar .hamburger-menu .menu-items .first {
     opacity: 1;
+}
+
+.navbar .hamburger-menu .menu-items .submenu #individual {
+    align-self: flex-start;
 }
 
 .navbar .container .hamburger-menu .menu-items .submenu #individual #second-span {
@@ -188,7 +212,7 @@ img {
 }
 
 .has-dropdown {
-    position: relative;
+    position: relataive;
 }
 
 .dropdown-header {
@@ -212,8 +236,12 @@ img {
 } 
 
 .submenu.active ~ #contact {
-    margin-top: 0.5em;
+    margin-top: 1.2em;
 }
+
+/* .navbar .hamburger-menu .menu-items .submenu li a {
+    color: var(--dark-gray-color);
+} */
 
 /* Clinical Services when active*/
 .clinical-services.active {
@@ -228,9 +256,9 @@ img {
 }
 
 /* Hero */
-main, .hero {
+.hero {
     flex-grow: 1;
-    display: flex; 
+    display: flex;
     overflow: hidden; /*shrinks image2 to fit perfectly inside its contianer*/
 }
 
@@ -240,17 +268,6 @@ main, .hero {
     top: 0;
     left: 0;
     display: flex;
-}
-
-.hero .container .zencarebadge {
-    cursor: pointer;
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    width: 250px; 
-    height: 150px;
-    border: none;
-    z-index: 5;
 }
 
 .hero .container .transparent-couch { 
@@ -281,12 +298,11 @@ main, .hero {
 
 /* Footer */
 footer {
+    flex-grow: 1.5; 
     background: var(--primary-color);
     display: flex; 
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-grow: 1.5; 
     padding: 1em;
 }
 
@@ -300,7 +316,6 @@ footer .secondp {
     display: none;
 }
 
-/* For website links */
 p a {
     color: var(--primary-color);
     text-decoration: underline;
@@ -312,20 +327,9 @@ p a {
     .navbar .hamburger-menu {
         border-radius: 0px 0px 30px 30px;
     }
-
 }
 
 @media (max-width: 1100px) {
-    .hero .container .zencarebadge {
-        display: none;
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        width: 250px; 
-        height: 150px;
-        border: none;
-    }
-
     .navbar .hamburger-menu {
         width: 98%;
         height: 100%;
@@ -337,6 +341,7 @@ p a {
     }
 
     .navbar .hamburger-menu .menu-items {
+        /* height: 50%; */
         margin-top: 2em;
         align-items: flex-end;
         margin-right: 2em;
@@ -369,6 +374,9 @@ p a {
         line-height: 2em;
         font-size: 0.9em;
     }
+    .navbar .container .badges>*{
+        transform: translateX(-20%);
+    }
 }
 
 @media (max-width: 650px) {
@@ -383,6 +391,10 @@ p a {
 
     .navbar .container .contact-button {
         font-size: 1.35em;
+    }
+
+    .navbar .container .badges {
+        transform: translateX(-50%) scale(0.9);
     }
 
     .navbar .container .menu-container .hamburger-button .hamburger-line {
@@ -405,8 +417,20 @@ p a {
         height: 0.425em;
     }
 
+    .navbar .container .hamburger-menu .menu-items .submenu #individual #first-span {
+        display: none;
+    }
+
+    .navbar .container .hamburger-menu .menu-items .submenu #individual #second-span {
+        display: block;
+    }
+
     .navbar .container .contact-button {
         font-size: 1.2em;
+    }
+
+    .navbar .container .badges {
+        transform: translateX(-50%) scale(0.75);
     }
 
     .hero .container .hero-content .hero-heading {
@@ -437,12 +461,39 @@ p a {
         font-size: 1.0125em;
     }
 
+    .navbar .container .badges{
+        transform: translateX(-50%) scale(0.65);
+    }
+
     .hero .container .hero-content .hero-heading {
         font-size: 1.5em;
     }
+}
+@media (max-width: 430px) {
+    .navbar .container .badges {
+        display: none;
+    }
+}
 
+@media (max-width: 360px) {
     footer .secondp {
         font-size: 0.8em;
     }
-    
 }
+
+/* @media (min-height: 900px) {
+    footer .firstp {
+        display: none;
+    }
+    footer .secondp {
+        display: block;
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-height : 1100px) {
+    footer .secondp {
+        font-size: 2em;
+    }
+} */

@@ -18,7 +18,7 @@ body {
     padding: 1.25em 1em 0em 1.25em; */
     font-size: 1.5em;
     line-height: 1.6em;
-    color: var(--text-color);
+    color: #636363;
     max-height: 800px;
     overflow: hidden;
     position: relative;

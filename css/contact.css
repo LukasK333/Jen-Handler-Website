@@ -2,13 +2,6 @@
     flex-grow: 1;
     min-height: calc(100vh - 5.3em - 3em); /* Subtracting navbar and footer heights */
     overflow-y: auto;
-    position: relative;
-}
-
-.hero .headshot {
-    position: absolute;
-    width: 130px;
-    height: auto;
 }
 
 .hero .container {
@@ -21,17 +14,20 @@
 }
 
 .hero .container .text {
-    color: var(--text-color);
+    color: #636363;
     justify-self: center;
     font-size: 1.5em;
+    /* margin: 0.5em 0em 1.5em 0em; */
     margin: 0.5em 0em 9em 0em;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero .container .zoomable-map {
     justify-self: end;
     width: 100%;
     max-width: 600px;
-    margin-right: 3em;
+    /* margin-right: 1.6em; */
 }
 
 .hero .container .zoomable-map .map {
@@ -40,12 +36,16 @@
 }
 
 
-.hero .container .text p {
+.hero .container .contact-info p {
     margin-top: 0.5em;
 }
-.hero .container .text .call-to-action {
+.hero .container .call-to-action {
     margin-top: 2em;
+}
+
+.hero .container .call-to-action p {
     text-decoration: underline;
+    /* margin-top: 0.5em; */
 }
 
 .hero .container .call-to-action :first-child {
@@ -54,8 +54,7 @@
     font-weight: bold;
 }
 
-@media (min-width: 1240px) {
-
+@media (min-width: 1440px) {
     .hero .container {
         display: flex;
         flex-direction: row;
@@ -65,20 +64,13 @@
     }
 }
 
-@media (max-width: 1400px) {
-    .hero .headshot {
-        display: none;
-    }
-}
-
-@media(max-width: 1000px) {
-    
+@media(max-width: 740px) {
     .hero .container {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+
     }
     .hero .container .text {
-        margin: 2em auto;
+        margin: 0em auto;
     }
     .hero .container .zoomable-map {
         display: flex;
@@ -95,34 +87,14 @@
     }
 }
 
-
-/**
-* undoing the navbar styling of style.css below 480px 
-* this way menu-container and contact-button keep the same size and margins below 480px
-*/
-@media (max-width: 550px) { 
-    .hero .container .hero-content .hero-heading .title {
-        padding: 0.5em;
+@media(max-width: 730px) {
+    .hero {
+        min-height: auto;
+        /* min-height: calc(100vh - 5.3em - 5em); */
     }
+}
 
-    .navbar .container .menu-container {
-        margin-left: 1.5em;
-    }
-
-    .navbar .container .menu-container .menu {
-        font-size: 1.25em;
-    }
-    
-    .navbar .container .menu-container .hamburger-button .hamburger-line {
-        width: 2.3em;
-        height: 0.425em;
-    }
-
-    .navbar .container .contact-button {
-        font-size: 1.2em;
-        margin-right: 1em;
-    }
-
+@media(max-width: 480px) {
     .hero .container .text {
         font-size: 1.4em;
     }
