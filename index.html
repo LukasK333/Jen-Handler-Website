@@ -3,7 +3,9 @@
    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="images/Couch.png" fetchpriority="high">
     <title>Jen Handler Psychotherapy & Psychoanalysis</title>
+    
     
     <!-- Enhanced Meta Tags -->
     <meta name="description" content="Hello there! My name is Jen Handler and I offer psychotherapy and psychoanalysis to individuals and couples based in New York City. " />
@@ -25,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Jen Handler Psychotherapy & Psychoanalysis"/>
     <meta name="twitter:description" content="Hello there! My name is Jen Handler and I offer psychotherapy and psychoanalysis to individuals and couples based in New York City. "/>
-    <meta name="twitter:image" content="https://jenhandlernyc.com/images/Couch.png"/>
+    <!-- <meta name="twitter:image" content="https://jenhandlernyc.com/images/Couch.png"/> -->
 
     <!-- Schema for SEO -->
     <script type="application/ld+json">
@@ -115,7 +117,10 @@
         <img
           class="transparent-couch"
           src="images/Couch.png"
-          alt="couch-background-image"
+          alt="background image of a couch"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
         <div class="hero-content">
           <h1 class="hero-heading">
