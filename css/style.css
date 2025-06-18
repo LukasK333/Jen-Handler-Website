@@ -279,11 +279,11 @@ img {
     height: auto;
 }
 
-.hero .container .transparent-couch img {
+/* .hero .container .transparent-couch img {
     display: block;
     height: 100%;
     width: auto;
-}
+} */
 
 .hero .container .hero-content {
     position: absolute;
@@ -372,7 +372,11 @@ p a {
     }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 750px) {
+
+    .hero .container .hero-content .hero-heading {
+        font-size: 2.3em;
+    }
     footer .firstp {
         display: none;
     }
