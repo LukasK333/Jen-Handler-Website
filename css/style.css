@@ -272,9 +272,17 @@ img {
 
 .hero .container .transparent-couch { 
     position: relative; /*image gives the container its width, and is relative to its parent container*/
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.hero .container .transparent-couch img {
+    display: block;
+    height: 100%;
+    width: auto;
 }
 
 .hero .container .hero-content {
