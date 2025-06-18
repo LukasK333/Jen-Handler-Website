@@ -1,0 +1,107 @@
+.hero {
+    flex-grow: 1;
+    min-height: calc(100vh - 5.3em - 3em); /* Subtracting navbar and footer heights */
+    overflow-y: auto;
+}
+
+.hero .container {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(337.5px, 1fr)); 
+    margin: 0 auto;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.hero .container .text {
+    color: #636363;
+    justify-self: center;
+    font-size: 1.5em;
+    /* margin: 0.5em 0em 1.5em 0em; */
+    margin: 0.5em 0em 9em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .container .zoomable-map {
+    justify-self: end;
+    width: 100%;
+    max-width: 600px;
+    /* margin-right: 1.6em; */
+}
+
+.hero .container .zoomable-map .map {
+    width: 100%;
+    height: 450px;
+}
+
+
+.hero .container .contact-info p {
+    margin-top: 0.5em;
+}
+.hero .container .call-to-action {
+    margin-top: 2em;
+}
+
+.hero .container .call-to-action p {
+    text-decoration: underline;
+    /* margin-top: 0.5em; */
+}
+
+.hero .container .call-to-action :first-child {
+    color: var(--primary-color);
+    /* color: #636363; */
+    font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+    .hero .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10em;
+        justify-content: center;
+        /* margin: 0 auto; */
+    }
+}
+
+@media(max-width: 740px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+
+    }
+    .hero .container .text {
+        margin: 0em auto;
+    }
+    .hero .container .zoomable-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em auto;
+        padding-bottom: 1em;
+    }
+    .hero .container .zoomable-map .map {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media(max-width: 730px) {
+    .hero {
+        min-height: auto;
+        /* min-height: calc(100vh - 5.3em - 5em); */
+    }
+}
+
+@media(max-width: 480px) {
+    .hero .container .text {
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 360px) {
+    .hero .container .text {
+        font-size: 1.2em;
+    }
+}
