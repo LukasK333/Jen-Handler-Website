@@ -1,6 +1,21 @@
 // Make sure the function is globally accessible
 window.onRecaptchaSuccess = onRecaptchaSuccess;
 
+// If WebP detected, replace png with webp
+function loadWebP() {
+  const img = new Image();
+  img.onload = function() {
+    if (img.width > 0 && img.height > 0) {
+      // WebP is supported
+      const couchImg = document.querySelector('.transparent-couch');
+      if (couchImg && couchImg.dataset.webp) {
+        couchImg.src = couchImg.dataset.webp;
+      }
+    }
+  };
+  img.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+}
+
 document.addEventListener('DOMContentLoaded', function () { 
     const menuContainer = document.querySelector('.menu-container');
     const homeContainer = document.querySelector('.home-container');
@@ -43,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     })
+
+    // Add WebP detection
+    loadWebP();
 
 });
 
