@@ -212,7 +212,7 @@ function adjustRelationshipTextHeight() {
     if (window.innerWidth > 860) {
         // For wider screens where image is floated left
         const offsetTop = textTopParagraph.offsetTop + text.offsetTop;
-        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + 30);
+        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + 50);
 
         // Ensure we have at least some minimum visible text
         maxHeight = Math.max(maxHeight, 150);
@@ -244,6 +244,28 @@ window.addEventListener('load', function() {
         adjustRelationshipTextHeight();
     }
 });
+
+function initializePageLayout() {
+    // Check if we're on the about me page
+    if (document.querySelector('.about-me') || document.querySelector('.approach')) {
+        adjustTextHeight();
+
+        // Follow-up adjustments to catch any missed calculations
+        setTimeout(() => adjustTextHeight(), 50);
+        setTimeout(() => adjustTextHeight(), 200);
+    }
+
+    if (document.querySelector('.paragraph-container')) {
+        // Initial adjustment
+        adjustRelationshipTextHeight();
+        
+        // Follow-up adjustments to catch any missed calculations
+        setTimeout(() => adjustRelationshipTextHeight(), 50);
+        setTimeout(() => adjustRelationshipTextHeight(), 200);
+    }
+}
+
+window.addEventListener('load', initializePageLayout);
 
 // Call the function when the window is resized
 window.addEventListener('resize', function() {

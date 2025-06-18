@@ -272,18 +272,10 @@ img {
 
 .hero .container .transparent-couch { 
     position: relative; /*image gives the container its width, and is relative to its parent container*/
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
-    width: auto;
-    height: auto;
 }
-
-/* .hero .container .transparent-couch img {
-    display: block;
-    height: 100%;
-    width: auto;
-} */
 
 .hero .container .hero-content {
     position: absolute;
@@ -372,11 +364,7 @@ p a {
     }
 }
 
-@media (max-width: 750px) {
-
-    .hero .container .hero-content .hero-heading {
-        font-size: 2.3em;
-    }
+@media (max-width: 730px) {
     footer .firstp {
         display: none;
     }
