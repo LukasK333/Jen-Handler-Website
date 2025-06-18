@@ -277,12 +277,6 @@ img {
     transform: translateX(-50%);
 }
 
-.hero .container .transparent-couch img {
-    height: auto;
-    width: 100%;
-    display: block;
-}
-
 .hero .container .hero-content {
     position: absolute;
     top: 0;
