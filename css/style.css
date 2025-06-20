@@ -281,6 +281,12 @@ img {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    /* Maintain aspect ratio */
+    aspect-ratio: 1000 / 667;
+    /* Remove any fixed width/height here - let it be responsive */
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Ensure no overflow */
 }
 
 .hero .container .hero-content {
