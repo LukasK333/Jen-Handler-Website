@@ -3,7 +3,17 @@
    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preload the LCP image -->
+    <link rel="preload" as="image" href="images/Couch-optimized.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="images/Couch.png" fetchpriority="high">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" as="style" href="css/style.css">
+    
+    <!-- DNS prefetch for third-party resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//zencare.co">
+    <link rel="dns-prefetch" href="//member.psychologytoday.com">
     <title>Jen Handler Psychotherapy & Psychoanalysis</title>
     
     
@@ -70,7 +80,8 @@
           <!--Close Button-->
           <div class="home-container hidden">
             <button class="close-button" aria-label="Close menu" aria-expanded="true">
-              <span aria-hidden="true">&times;</span>
+
+              <span aria-hidden="true">×</span>
             </button> 
           </div>
           <div class="badges">
@@ -133,7 +144,8 @@
         <div class="hero-content">
           <h1 class="hero-heading">
             <span>Jen Handler</span><br />
-            Psychotherapy &amp; <br />
+
+            Psychotherapy & <br />
             Contemporary Psychoanalysis
           </h1>
         </div>
