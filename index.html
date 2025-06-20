@@ -115,11 +115,17 @@
       <div class="container">
         <img
           class="transparent-couch"
+          srcset="images/Couch-mobile.webp 600w,
+          images/Couch-optimized.webp 800w,
+          images/Couch.webp 1200w"
+          sizes="(max-width: 600px) 600px,
+         (max-width: 1000px) 800px,
+         1200px"
           src="images/Couch.png"
-          data-webp="images/Couch.webp"
+          data-webp="images/Couch-optimized.webp"
           alt="background image of a couch"
-          width="1000"
-          height="667"
+          width="800"
+          height="600"
           loading="eager"
           fetchpriority="high"
           decoding="async"
