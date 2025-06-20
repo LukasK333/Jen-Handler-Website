@@ -18,6 +18,12 @@ body {
     background-size: 100% 300%; /* Put here instead of .hero section so that it covers both .hero and .aboutme sections in aboutme.html */
 }
 
+/* WebP version - will be applied via JavaScript */
+body.webp-supported {
+    background: url(../images/Blank-Wall.webp);
+    background-size: 100% 300%;
+}
+
 a {
     text-decoration: none;
 }

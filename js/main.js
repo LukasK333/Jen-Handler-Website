@@ -10,7 +10,8 @@ function loadWebP() {
       const couchImg = document.querySelector('.transparent-couch');
       if (couchImg && couchImg.dataset.webp) {
         couchImg.src = couchImg.dataset.webp;
-      }
+        }
+        document.body.classList.add('webp-supported');
     }
   };
   img.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
