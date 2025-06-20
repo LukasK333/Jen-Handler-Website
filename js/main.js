@@ -1,21 +1,21 @@
 // Make sure the function is globally accessible
 window.onRecaptchaSuccess = onRecaptchaSuccess;
 
-// If WebP detected, replace png with webp
-function loadWebP() {
-  const img = new Image();
-  img.onload = function() {
-    if (img.width > 0 && img.height > 0) {
-      // WebP is supported
-      const couchImg = document.querySelector('.transparent-couch');
-      if (couchImg && couchImg.dataset.webp) {
-        couchImg.src = couchImg.dataset.webp;
-        }
-        document.body.classList.add('webp-supported');
-    }
-  };
-  img.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-}
+// // If WebP detected, replace png with webp
+// function loadWebP() {
+//   const img = new Image();
+//   img.onload = function() {
+//     if (img.width > 0 && img.height > 0) {
+//       // WebP is supported
+//       const couchImg = document.querySelector('.transparent-couch');
+//       if (couchImg && couchImg.dataset.webp) {
+//         couchImg.src = couchImg.dataset.webp;
+//         }
+//         document.body.classList.add('webp-supported');
+//     }
+//   };
+//   img.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+// }
 
 document.addEventListener('DOMContentLoaded', function () { 
     const menuContainer = document.querySelector('.menu-container');
@@ -60,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    // Add WebP detection
-    loadWebP();
+    initializePageLayout();
+    // // Add WebP detection
+    // loadWebP();
 
 });
 
@@ -175,7 +176,7 @@ function adjustTextHeight() {
     var maxHeight;
 
     if (window.innerWidth > 760) {
-        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight); // Add some extra padding
+        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + 10); // Add some extra padding
     }
     else {
         maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + minTextHeight); // Add some extra padding
@@ -271,7 +272,7 @@ function initializePageLayout() {
 
         // Follow-up adjustments to catch any missed calculations
         setTimeout(() => adjustTextHeight(), 50);
-        setTimeout(() => adjustTextHeight(), 200);
+        // setTimeout(() => adjustTextHeight(), 200);
     }
 
     if (document.querySelector('.paragraph-container')) {
@@ -280,11 +281,16 @@ function initializePageLayout() {
         
         // Follow-up adjustments to catch any missed calculations
         setTimeout(() => adjustRelationshipTextHeight(), 50);
-        setTimeout(() => adjustRelationshipTextHeight(), 200);
+        // setTimeout(() => adjustRelationshipTextHeight(), 200);
     }
 }
 
-window.addEventListener('load', initializePageLayout);
+window.addEventListener('load', function () {
+    // Only run if not already initialized
+    if (!document.body.hasAttribute('data-layout-initialized')) {
+        initializePageLayout();
+    }
+});
 
 // Call the function when the window is resized
 window.addEventListener('resize', function() {
