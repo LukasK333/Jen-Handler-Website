@@ -9,10 +9,6 @@
     float: left;
 }
 
-.hero .container .hero-content .hero-heading #second-span {
-    display: none;
-}
-
 .button-div {
     text-align: center;
     margin: 0.5em 0em 0em 0em;
@@ -28,10 +24,6 @@
     cursor: pointer;
 }
 
-/* .text-button:hover {
-    background-color: #e67e22;
-} */
-
 @media (max-width: 860px) {
     .hero .container .hero-content .text-button-wrapper .paragraph-container .relationship-image {
         float: none;
@@ -46,7 +38,7 @@
         flex-direction: column;
     }
 
-    .hero .container .hero-content .hero-heading #first-span {
+    .hero .container .hero-content .hero-heading span {
         font-size: 0.88em;
     }
 
@@ -55,21 +47,12 @@
         flex-direction: column;
         gap: 1em;
     }
-
-    .hero .container .hero-content .text-button-wrapper .paragraph-container p {
-        text-align: left;
-    }
 }
 
 @media (max-width: 650px) {
     
-    .hero .container .hero-content .hero-heading #first-span {
-        display: none;
-    }
-    
-    .hero .container .hero-content .hero-heading #second-span {
-        display: block;
-        font-size: 0.9em;
+    .hero .container .hero-content .hero-heading span {
+        font-size: 0.9em
     }
 
     .hero .container .hero-content .paragraph-container {
@@ -83,7 +66,7 @@
 }
 
 @media (max-width: 480px) { /* undoing the navbar styling of style.css below 480px */
-    .hero .container .hero-content .hero-heading #second-span {
+    .hero .container .hero-content .hero-heading span {
         font-size: 0.8em;
     }
     
@@ -100,13 +83,3 @@
         font-size: 1.2em;
     }
 }
-
-/* @media (max-width: 650px) {
-    .hero .container .hero-content .hero-heading {
-        padding: 0em;
-    }
-
-    .hero .container .hero-content .paragraph-container p {
-        font-size: 1.25em;
-    }
-} */

@@ -82,7 +82,7 @@ function toggleDropdown() {
         const currentMenuHeight = hamburgerMenu.offsetHeight;
         const newMenuHeight = currentMenuHeight + submenuHeight;
         
-        hamburgerMenu.style.height = newMenuHeight + 'px';
+        hamburgerMenu.style.height = newMenuHeight + 20 + 'px';
     } else {
         hamburgerMenu.style.height = '';
         contactLink.style.marginTop = '';

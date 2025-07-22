@@ -25,7 +25,7 @@ body {
 
 .hero .container .hero-content .paragraph-container p {
     font-size: 1.5em;
-    margin-top: 0em;
+    margin-top: 1em;
     line-height: 1.6em;
     color: #636363
 }
@@ -37,4 +37,11 @@ footer {
     right: 0;
     margin-top: auto;
     flex-grow: 0;
+}
+
+@media (max-width: 860px) {
+    .hero .container .hero-content .text-button-wrapper .paragraph-container p {
+        margin-top: 0em;
+        text-align: left;
+    }
 }

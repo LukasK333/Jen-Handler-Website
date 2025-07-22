@@ -183,10 +183,6 @@ img {
     align-self: flex-start;
 }
 
-.navbar .container .hamburger-menu .menu-items .submenu #individual #second-span {
-    display: none;
-}
-
 .navbar .hamburger-menu .menu-items li a {
     color: #fff;
 }
@@ -438,14 +434,6 @@ p a {
     .navbar .container .menu-container .hamburger-button .hamburger-line {
         width: 2.3em;
         height: 0.425em;
-    }
-
-    .navbar .container .hamburger-menu .menu-items .submenu #individual #first-span {
-        display: none;
-    }
-
-    .navbar .container .hamburger-menu .menu-items .submenu #individual #second-span {
-        display: block;
     }
 
     .navbar .container .contact-button {
