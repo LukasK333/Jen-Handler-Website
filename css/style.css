@@ -169,14 +169,15 @@ img {
 
 .navbar .hamburger-menu .menu-items > li {
     margin-bottom: 1.5em;
-}
-
-.navbar .hamburger-menu .menu-items > li:not(#contact) {
     flex-shrink: 0;
 }
 
 .navbar .hamburger-menu .menu-items .first {
     opacity: 1;
+}
+
+.navbar .hamburger-menu .menu-items .contact-page-div {
+    position: relative;  
 }
 
 .navbar .hamburger-menu .menu-items .submenu #individual {
