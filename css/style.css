@@ -74,6 +74,7 @@ img {
     display: flex;
     align-items: center;
 }
+
 .navbar .container .badges .zencare-badge {
     width: 250px; 
     height: 73.32px; 
@@ -301,6 +302,32 @@ img {
 .hero .container .hero-content .hero-heading span {
     font-size: 1.09em;
     font-weight: 600;
+}
+
+/* Zencare and Psychology Today Badges */
+
+.hero .container .badges {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    right: 15px;
+    z-index: 5; /* to make sure badges aren't covered by anything */
+    pointer-events: auto; /* Ensure it doesn't interfere with other elements */
+}
+
+.hero .container .badges .zencare-badge {
+    width: 250px; 
+    height: 73.32px; 
+    transform: scale(0.7);
+    border: none;
+    display: block;
+    /* Ensure it maintains its position */
+    position: relative;
+    z-index: 5;
 }
 
 /* Footer */
