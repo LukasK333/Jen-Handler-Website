@@ -30,6 +30,10 @@ body {
     color: #636363
 }
 
+.hero .container .hero-content .paragraph-container p:first-of-type {
+    margin-top: 0;
+}
+
 footer {
     position: sticky;
     bottom: 0;
