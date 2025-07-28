@@ -55,7 +55,7 @@ img {
     background-color: #EFEAE5;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 1.675em;
+    font-size: 1.5em;
     padding: 0.33em 0.4em;
     border-radius: 4.4em;
     cursor: pointer;
@@ -99,7 +99,7 @@ img {
     margin-left: 0.4em;
     color: #EFEAE5;
     font-weight: 500;
-    font-size: 1.9em;
+    font-size: 1.7em;
 }
 
 /* Hamburger Button (within Menu Container) */
@@ -114,8 +114,8 @@ img {
 }; */
 
 .navbar .container .menu-container .hamburger-button .hamburger-line {
-    width: 2.8em;
-    height: 0.625em;
+    width: 2.5em;
+    height: 0.56em;
     border-radius: 4.4em;
     background: #EFEAE5;
     border: none;
@@ -301,7 +301,7 @@ img {
     color: var(--primary-color);
     font-weight: 500;
     padding-top: 1em;
-    font-size: 2.637em;
+    font-size: 2.5em;
     text-align: center;
 }
 .hero .container .hero-content .hero-heading span {
@@ -439,12 +439,6 @@ p a {
     .navbar .container .badges {
         transform: translateX(-50%) scale(0.75);
     }
-}
-
-@media (max-width: 650px) {
-    .hero .container .hero-content .hero-heading {
-        font-size: 2em;
-    }
 
     /*Below used to be at 480px*/
     .navbar .container .menu-container .menu {
@@ -463,6 +457,14 @@ p a {
         border: none;
         margin: 0.375em 0em;
     }
+    
+    .hero .container .hero-content .hero-heading {
+        font-size: 2em;
+    }
+
+}
+
+@media (max-width: 650px) {
 
     .navbar .container .badges{
         transform: translateX(-50%) scale(0.65);
