@@ -119,13 +119,14 @@ function checkForAboutOverflow() {
 function checkForOverflow() {
     const text = document.querySelector('.paragraph-container');
     const readMoreButton = document.querySelector('.button-div');
+    // const readMoreButtonHeight = readMoreButton.offsetHeight + 27; Wanted to subtract readMoreButtonHeight from fullHeight
     
     if (!text || !readMoreButton) return;
     
     // Temporarily remove max-height to get the full content height
     const originalMaxHeight = text.style.maxHeight;
     text.style.maxHeight = 'none';
-    const fullHeight = text.scrollHeight;
+    const fullHeight = text.scrollHeight; // Get only height of text
     
     // Restore the max-height
     text.style.maxHeight = originalMaxHeight;

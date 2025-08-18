@@ -55,7 +55,7 @@ img {
     background-color: #EFEAE5;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 0.33em 0.4em;
     border-radius: 4.4em;
     cursor: pointer;
@@ -99,7 +99,7 @@ img {
     margin-left: 0.4em;
     color: #EFEAE5;
     font-weight: 500;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 /* Hamburger Button (within Menu Container) */
@@ -114,8 +114,8 @@ img {
 }; */
 
 .navbar .container .menu-container .hamburger-button .hamburger-line {
-    width: 2.5em;
-    height: 0.56em;
+    width: 2.4em;
+    height: 0.5em;
     border-radius: 4.4em;
     background: #EFEAE5;
     border: none;
