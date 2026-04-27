@@ -606,3 +606,17 @@ p a {
 p {
   margin-bottom: 1.2em;
 }
+/* --- readability tweaks --- */
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+/* --- force-hide the show more/less button --- */
+.button-div {
+  display: none !important;
+}
