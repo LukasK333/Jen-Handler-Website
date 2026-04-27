@@ -617,3 +617,12 @@ p a {
   font-size: 13.5px;
   line-height: 1.6;
 }
+.about-me .text {
+  max-width: 520px;
+}
+
+.about-me .text p {
+  font-size: 13.5px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1em;
+}
