@@ -1,7 +1,8 @@
-.hero .container .hero-content .text-button-wrapper .paragraph-container {
-    overflow: hidden;
-    margin-top: 1em;
+.paragraph-container {
+  overflow: visible;
+  margin-top: 1em;
 }
+
 .hero .container .hero-content .relationship-image {
   max-width: 420px;
   width: 100%;
