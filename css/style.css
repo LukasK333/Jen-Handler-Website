@@ -603,3 +603,6 @@ p a {
 } body {
   font-size: 15px;
 }
+p {
+  margin-bottom: 1.2em;
+}
