@@ -600,19 +600,15 @@ p a {
         font-size: 1.3em;
         padding-top: 0.2em;
     }
-} body {
-  font-size: 15px;
-}
-p {
-  margin-bottom: 1.2em;
-}
+
+
 /* --- readability tweaks --- */
-body {
+.hero .container .hero-content {
   font-size: 14px;
   line-height: 1.5;
 }
 
-p {
+.hero .container .hero-content p {
   margin-bottom: 1.2em;
 }
 
