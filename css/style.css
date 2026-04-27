@@ -603,12 +603,9 @@ p a {
 
 
 /* --- readability tweaks --- */
-.hero .container .hero-content {
+.hero-content p {
   font-size: 14px;
   line-height: 1.5;
-}
-
-.hero .container .hero-content p {
   margin-bottom: 1.2em;
 }
 
