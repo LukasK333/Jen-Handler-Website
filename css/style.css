@@ -613,3 +613,7 @@ p a {
 .button-div {
   display: none !important;
 }
+    .about-me .text p {
+  font-size: 14px;
+  line-height: 1.6;
+}
