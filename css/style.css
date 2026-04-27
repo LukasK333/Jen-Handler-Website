@@ -600,4 +600,6 @@ p a {
         font-size: 1.3em;
         padding-top: 0.2em;
     }
+} body {
+  font-size: 15px;
 }
