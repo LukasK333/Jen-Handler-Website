@@ -2,11 +2,12 @@
     overflow: hidden;
     margin-top: 1em;
 }
-
 .hero .container .hero-content .relationship-image {
-    max-width: 500px;
-    padding: 0.5em 1em 0em 0em;
-    float: left;
+  max-width: 420px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 1.5em auto;
+  float: none;
 }
 
 .button-div {
