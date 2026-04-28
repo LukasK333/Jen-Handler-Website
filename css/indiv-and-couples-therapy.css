@@ -102,4 +102,9 @@
 
   margin: 0 auto;
 }
-
+.hero .container .hero-content .text-button-wrapper,
+.hero .container .hero-content .text-button-wrapper p,
+.hero .container .hero-content .text-button-wrapper a {
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+}
