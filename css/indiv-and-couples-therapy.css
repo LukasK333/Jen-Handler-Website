@@ -83,8 +83,10 @@
     }
 .hero .container .hero-content p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.45;
   color: #444;
+  margin-bottom: 0.9em;
+
 }
 .hero .container .hero-content .relationship-image {
   width: 360px;
