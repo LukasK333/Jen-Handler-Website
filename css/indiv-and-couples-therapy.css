@@ -85,3 +85,21 @@
   font-size: 14.5px;
   line-height: 1.5;
 }
+.hero .container .hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.hero .container .hero-content .relationship-image {
+  width: 260px;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  float: none;
+  margin: 0;
+}
+
+.hero .container .hero-content .text-button-wrapper {
+  max-width: 650px;
+}
