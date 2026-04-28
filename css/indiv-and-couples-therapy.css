@@ -81,8 +81,10 @@
     .navbar .container .contact-button {
         font-size: 1.2em;
     }
-body .hero .container .hero-content p {
-  font-size: 13.5px;
+.hero .container .hero-content p {
+  font-size: 13.5px !important;
+  line-height: 1.5;
+  color: #444;
 
 }
 .hero .container .hero-content .relationship-image {
