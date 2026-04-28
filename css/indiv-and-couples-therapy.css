@@ -82,7 +82,7 @@
         font-size: 1.2em;
     }
 .hero .container .hero-content p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.55;
   margin-bottom: 1.2em;
 }
@@ -92,21 +92,12 @@
   height: auto;
   display: block;
   float: none;
-  margin: 0 auto 1.5em auto;
+  margin: 0 auto 1em auto;
 }
 
 .hero .container .hero-content .text-button-wrapper {
   max-width: 640px;
   margin: 0 auto;
-}
-
-.hero .container .hero-content .relationship-image {
-  width: 260px;
-  max-width: 260px;
-  height: auto;
-  display: block;
-  float: none;
-  margin: 0;
 }
 
 .hero .container .hero-content .text-button-wrapper {
