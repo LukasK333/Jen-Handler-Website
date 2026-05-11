@@ -626,3 +626,35 @@ p a {
   line-height: 1.6 !important;
   margin-bottom: 1em;
 }
+    /* Mobile cleanup */
+@media (max-width: 768px) {
+  article.about-me p,
+  .hero .container .hero-content p {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 1.1em !important;
+  }
+
+  .button-div,
+  .text-button {
+    display: none !important;
+  }
+
+  .paragraph-container {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  footer,
+  .footer {
+    position: static !important;
+  }
+
+  article.about-me img,
+  .relationship-image {
+    max-width: 80% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 1.2em auto !important;
+  }
+}
