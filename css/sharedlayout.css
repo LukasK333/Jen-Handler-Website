@@ -44,10 +44,8 @@ body {
 }
 
 footer {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      position: static;
+     
       margin-top: auto;
       flex-grow: 0; /*Don't want the flex*/
       /* height: 2em; */  
