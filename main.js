@@ -90,6 +90,7 @@ function showText() { //!change this to just run off of adjustAboutTextHeight fu
 }
 
 function adjustTextHeight() {
+    if (window.innerWidth <= 760) return;
     const text = document.querySelector('.text');
     const textTopParagraph = text.firstElementChild;
     const footer = document.querySelector('footer');
