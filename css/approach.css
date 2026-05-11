@@ -24,6 +24,9 @@
 
 .approach .container .text-button-wrapper .text {
     padding-left: 1.25em;
+    max-height: none !important;
+    overflow: visible !important;
+
 }
 
 .approach .container .approach-image .title {
