@@ -68,11 +68,15 @@
 
 footer {
     position: static !important;
-    @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .hero .container .hero-content .text-button-wrapper .paragraph-container p {
         font-size: 16px !important;
         overflow-wrap: break-word !important;
         word-wrap: break-word !important;
+    }
+
     
 
 }
