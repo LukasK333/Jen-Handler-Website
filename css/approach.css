@@ -111,4 +111,7 @@
     .navbar .container .contact-button {
         font-size: 1.2em;
     }
+
+.button-div, .text-button {
+    display: none !important;
 }
