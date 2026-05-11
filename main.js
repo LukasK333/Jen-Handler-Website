@@ -87,8 +87,6 @@ function showText() { //!change this to just run off of adjustAboutTextHeight fu
         textButton.innerHTML = "Read More";
         adjustTextHeight(); // Reset the max-height 
     
-
-function adjustTextHeight() {
 function adjustTextHeight() {
     const text = document.querySelector('.text');
     if (window.innerWidth <= 760) {
@@ -121,6 +119,4 @@ function adjustTextHeight() {
 // Call the function when the page loads
 window.addEventListener('load', adjustTextHeight);
 
-// Call the function when the window is resized
-window.addEventListener('resize', adjustTextHeight);
 
