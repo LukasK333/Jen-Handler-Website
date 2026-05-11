@@ -114,7 +114,6 @@ function adjustTextHeight() {
 
     text.style.maxHeight = `${maxHeight}px`;
 }
-}
 
 // Call the function when the page loads
 window.addEventListener('load', adjustTextHeight);
