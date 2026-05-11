@@ -57,4 +57,16 @@
     .hero .container .hero-content .paragraph-container p {
         font-size: 1.25em;
     }
+    .hero .container .hero-content .text-button-wrapper .paragraph-container {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.button-div, .text-button {
+    display: none !important;
+}
+
+footer {
+    position: static !important;
+
 }
