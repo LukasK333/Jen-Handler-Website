@@ -86,20 +86,20 @@ function showText() { //!change this to just run off of adjustAboutTextHeight fu
 
         textButton.innerHTML = "Read More";
         adjustTextHeight(); // Reset the max-height 
-    }
-}
+    
 
 function adjustTextHeight() {
-    if (window.innerWidth <= 760) return;
+function adjustTextHeight() {
     const text = document.querySelector('.text');
+    if (window.innerWidth <= 760) {
+        text.style.maxHeight = 'none';
+        text.style.overflow = 'visible';
+        return;
+    }
     const textTopParagraph = text.firstElementChild;
     const footer = document.querySelector('footer');
-    // const readMoreButton = document.querySelector('.text-button');
     const readMoreButton = document.querySelector('.button-div');
-
     const windowHeight = window.innerHeight;
-
-    // offset from top paragraph to top border of body element (closest positioned parent of aboutText)
     const offsetTop = textTopParagraph.offsetTop + text.offsetTop;
     const readMoreButtonHeight = readMoreButton.offsetHeight;
     const footerHeight = footer.offsetHeight;
@@ -108,13 +108,14 @@ function adjustTextHeight() {
     var maxHeight;
 
     if (window.innerWidth > 760) {
-        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight); // Add some extra padding
+        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight);
     }
     else {
-        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + minTextHeight); // Add some extra padding
+        maxHeight = windowHeight - (offsetTop + footerHeight + readMoreButtonHeight + minTextHeight);
     }
 
     text.style.maxHeight = `${maxHeight}px`;
+}
 }
 
 // Call the function when the page loads
