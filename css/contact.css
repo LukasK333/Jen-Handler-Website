@@ -23,6 +23,11 @@
     flex-direction: column;
 }
 
+.hero .container .text h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
 .hero .container .zoomable-map {
     justify-self: end;
     width: 100%;
