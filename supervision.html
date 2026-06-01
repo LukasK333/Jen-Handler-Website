@@ -36,52 +36,49 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Clinical Supervision by Jen Handler, LCSW",
-        "description": "I provide clinical supervision to therapists looking to deepen their therapeutic skills and explore issues that may be coming up in the treatment of their patients.",
-        "provider": {
-          "@type": "Person",
-          "name": "Jen Handler",
-          "jobTitle": "LCSW, Clinical Supervisor",
-          "affiliation": "National Institute for the Psychotherapies"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "302 5th Avenue, Suite 1114",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001",
-          "addressCountry": "US"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "(914) 933-7383",
-          "email": "jenhandlerlcsw@gmail.com",
-          "contactType": "professional"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Clinical Supervision Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Clinical Supervision",
-                "description": "Individual supervision for therapists. I use a contemporary relational psychoanalytic framework to explore themes and issues that may be coming up in the treatment of your patients."
-              }
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://jenhandlertherapy.com/supervision.html#webpage",
+            "url": "https://jenhandlertherapy.com/supervision.html",
+            "name": "Clinical Supervision",
+            "isPartOf": {
+              "@id": "https://jenhandlertherapy.com/#website"
+            },
+            "about": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            },
+            "mainEntity": {
+              "@id": "https://jenhandlertherapy.com/supervision.html#service"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://jenhandlertherapy.com/images/therapyroomwindow.jpg"
             }
-          ]
-        },
-        "image": "images/therapyroomwindow.jpg",
-        "url": "https://jenhandlertherapy.com/supervision.html",
-        "sameAs": [
-          "https://www.linkedin.com/in/jen-handler-514a692/",
-          "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
-          "https://zencare.co/provider/therapist/jen-handler"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://jenhandlertherapy.com/supervision.html#service",
+            "name": "Clinical Supervision",
+            "url": "https://jenhandlertherapy.com/supervision.html",
+            "image": "https://jenhandlertherapy.com/images/therapyroomwindow.jpg",
+            "description": "Clinical supervision for psychotherapists seeking to deepen their therapeutic skills and explore issues arising in the treatment of their patients.",
+            "provider": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            },
+            "serviceType": "Clinical Supervision",
+            "audience": {
+              "@type": "PeopleAudience",
+              "audienceType": "Psychotherapists"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "New York City"
+            }
+          }
         ]
       }
-      </script>
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

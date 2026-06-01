@@ -35,49 +35,24 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Jen Handler LCSW Therapy Services",
-        "image": "images/diagonalbluecouch.jpg",
-        "url": "https://jenhandlertherapy.com/indiv-and-couples-therapy",
-        "@id": "https://jenhandlertherapy.com",
-        "telephone": "(914) 933-7383",
-        "email": "jenhandlerlcsw@gmail.com",
-        "priceRange": "$250-$300",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "302 5th Avenue, Suite 1114",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "40.7466",
-          "longitude": "-73.9857"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ]
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/jen-handler-514a692/",
-          "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
-          "https://zencare.co/provider/therapist/jen-handler"
-        ],
-        "serviceType": [
-          "Individual Psychotherapy",
-          "Couples Therapy",
-          "Psychodynamic Therapy",
-          "Psychoanalysis"
-        ],
-        "medicalSpecialty": "Psychotherapy"
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id": "https://jenhandlertherapy.com/indiv-and-couples-therapy.html#service",
+            "name": "Individual and Couples Therapy",
+            "provider": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            },
+            "serviceType": [
+              "Individual Psychotherapy",
+              "Couples Therapy"
+            ],
+            "audience": {
+              "@type": "PeopleAudience",
+              "audienceType": "Adults and Couples"
+            }
+          }
+        ]
       }
     </script>
 

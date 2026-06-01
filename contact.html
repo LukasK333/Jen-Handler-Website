@@ -35,38 +35,46 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact Jen Handler, LCSW",
-        "description": "Contact information and location details for Jen Handler, LCSW - NYC Therapist",
-        "mainEntity": {
-          "@type": "ProfessionalService",
-          "name": "Jen Handler, LCSW",
-          "image": "https://jenhandlertherapy.com/images/newtherapyroomwindow.png",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "302 Fifth Avenue, 11th Floor",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
-            "postalCode": "10001",
-            "addressCountry": "US"
+        "@graph": [
+          {
+            "@type": "ContactPage",
+            "@id": "https://jenhandlertherapy.com/contact.html#webpage",
+            "url": "https://jenhandlertherapy.com/contact.html",
+            "name": "Contact Jen Handler",
+            "description": "Contact information for Jen Handler, LCSW, including phone, email, office location, and therapy consultation inquiries.",
+            "mainEntity": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            }
           },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "40.74672992483289",
-            "longitude": "-73.99067736625506"
-          },
-          "telephone": "914-933-7383",
-          "email": "jenhandlerLCSW@gmail.com",
-          "url": "https://jenhandlertherapy.com/contact.html",
-          "openingHours": "Mo-Fr 09:00-17:00",
-          "priceRange": "$$",
-          "areaServed": {
-            "@type": "City",
-            "name": "New York City"
+          {
+            "@type": ["ProfessionalService","LocalBusiness"],
+            "@id": "https://jenhandlertherapy.com/#practice",
+            "name": "Jen Handler Psychotherapy & Psychoanalysis",
+            "url": "https://jenhandlertherapy.com/",
+            "telephone": "(914) 933-7383",
+            "email": "jenhandlerlcsw@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "302 5th Avenue, Suite 1114",
+              "addressLocality": "New York",
+              "addressRegion": "NY",
+              "postalCode": "10001",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.74679204669479,
+              "longitude": -73.98613791649849
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/jen-handler-514a692/",
+              "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
+              "https://zencare.co/provider/therapist/jen-handler"
+            ]
           }
-        }
+        ]
       }
-      </script>
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

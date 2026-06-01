@@ -36,15 +36,48 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Jen Handler Psychotherapy & Psychoanalysis",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "302 5th Avenue, Suite 1114",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://jenhandlertherapy.com/#website",
+            "url": "https://jenhandlertherapy.com/",
+            "name": "Jen Handler Psychotherapy & Psychoanalysis",
+            "publisher": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            }
+          },
+          {
+            "@type": ["ProfessionalService","LocalBusiness"],
+            "@id": "https://jenhandlertherapy.com/#practice",
+            "name": "Jen Handler Psychotherapy & Psychoanalysis",
+            "url": "https://jenhandlertherapy.com/",
+            "image": "https://jenhandlertherapy.com/images/Couch.png",
+            "telephone": "(914) 933-7383",
+            "email": "jenhandlerlcsw@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "302 5th Avenue, Suite 1114",
+              "addressLocality": "New York",
+              "addressRegion": "NY",
+              "postalCode": "10001",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 40.74679204669479,
+              "longitude": -73.98613791649849
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "New York City"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/jen-handler-514a692/",
+              "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
+              "https://zencare.co/provider/therapist/jen-handler"
+            ]
+          }
+        ]
       }
     </script>
 

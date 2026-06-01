@@ -70,56 +70,53 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jen Handler",
-        "jobTitle": "Psychotherapist & Psychoanalyst",
-        "description": "Psychodynamic psychotherapist and contemporary relational psychoanalyst with over 10 years of experience working with individuals and couples.",
-        "image": "https://jenhandlertherapy.com/images/White-Blazer.jpg",
-        "url": "https://jenhandlertherapy.com/aboutme.html",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "302 5th Avenue, Suite 1114",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001",
-          "addressCountry": "US"
-        },
-        "telephone": "(914) 933-7383",
-        "email": "jenhandlerlcsw@gmail.com",
-        "knowsAbout": [
-          "Individual Therapy",
-          "Couples Therapy",
-          "LGBTQIA+ Therapy",
-          "Psychodynamic Psychotherapy",
-          "Contemporary Relational Psychoanalysis",
-          "Emotionally Focused Therapy (EFT)",
-          "Clinical Supervision"
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/in/jen-handler-514a692/",
-          "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
-          "https://zencare.co/provider/therapist/jen-handler"
-        ],
-        "credentials": [
+        "@graph": [
           {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Bachelor's Degree",
-            "institutionName": "Brown University"
+            "@type": "AboutPage",
+            "@id": "https://jenhandlertherapy.com/aboutme.html#webpage",
+            "url": "https://jenhandlertherapy.com/aboutme.html",
+            "mainEntity": {
+              "@id": "https://jenhandlertherapy.com/#jen-handler"
+            }
           },
           {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Professional Degree",
-            "institutionName": "NYU",
-            "credentialName": "J.D."
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "degree",
-            "educationalLevel": "Master's Degree",
-            "institutionName": "NYU",
-            "credentialName": "M.S.W."
+            "@type": "Person",
+            "@id": "https://jenhandlertherapy.com/#jen-handler",
+            "name": "Jen Handler",
+            "jobTitle": "Licensed Clinical Social Worker",
+            "image": "https://jenhandlertherapy.com/images/White-Blazer.jpg",
+            "telephone": "(914) 933-7383",
+            "email": "jenhandlerlcsw@gmail.com",
+            "worksFor": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            },
+            "knowsAbout": [
+              "Psychodynamic Psychotherapy",
+              "Relational Psychoanalysis",
+              "Contemporary Psychoanalysis",
+              "Couples Therapy",
+              "Career Transitions",
+              "Relationship Conflict",
+              "Identity Exploration",
+              "Gender Identity",
+              "Sexuality Exploration",
+              "LGBTQIA+ Affirming Therapy",
+              "Lawyers",
+              "Law Students",
+              "High Achieving Professionals",
+              "College Students",
+              "Graduate Students",
+              "Creative Professionals",
+              "Trauma",
+              "Self Esteem",
+              "Perfectionism",
+              "ADHD"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/jen-handler-514a692/",
+              "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
+              "https://zencare.co/provider/therapist/jen-handler"
+            ]
           }
         ]
       }
