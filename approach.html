@@ -39,62 +39,27 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "Jen Handler Psychotherapy",
-        "image": "images/Orange-Chair-Lamp.jpg",
-        "description": "Individual psychodynamic psychotherapy, psychoanalysis, and couples therapy in NYC. Specializing in anxiety, depression, and relationship dynamics using contemporary relational approaches and EFT.",
-        "@id": "https://jenhandlertherapy.com/approach",
-        "url": "https://jenhandlertherapy.com/approach",
-        "telephone": "(914) 933-7383",
-        "email": "jenhandlerlcsw@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "302 5th Avenue, Suite 1114",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "postalCode": "10001",
-          "addressCountry": "US"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 40.7466,
-          "longitude": -73.9857
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ]
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/jen-handler-514a692/",
-          "https://www.psychologytoday.com/us/therapists/jen-handler-new-york-ny/422737",
-          "https://zencare.co/provider/therapist/jen-handler"
-        ],
-        "priceRange": "$$",
-        "medicalSpecialty": [
-          "Psychotherapy",
-          "Psychoanalysis",
-          "Couples Therapy"
-        ],
-        "availableService": [
+        "@graph": [
           {
-            "@type": "MedicalTherapy",
-            "name": "Individual Psychodynamic Psychotherapy",
-            "description": "Contemporary relational psychoanalytic approach for self-discovery to make postive change"
-          },
-          {
-            "@type": "MedicalTherapy",
-            "name": "Couples Therapy",
-            "description": "Emotionally focused therapy (EFT) for romantic and familial relationships"
+            "@type": "Service",
+            "@id": "https://jenhandlertherapy.com/approach.html#service",
+            "name": "Psychodynamic Psychotherapy and Contemporary Psychoanalysis",
+            "provider": {
+              "@id": "https://jenhandlertherapy.com/#practice"
+            },
+            "serviceType": [
+              "Psychodynamic Psychotherapy",
+              "Contemporary Psychoanalysis",
+              "Relational Psychoanalysis"
+            ],
+            "audience": {
+              "@type": "PeopleAudience",
+              "audienceType": "Adults, Couples, Students, Lawyers, Creative Professionals and High Achieving Professionals"
+            }
           }
         ]
       }
-      </script>
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
