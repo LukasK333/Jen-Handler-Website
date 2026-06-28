@@ -1,0 +1,88 @@
+# Jen Handler Therapy
+
+This website represents the psychotherapy practice of Jen Handler, JD, LCSW, in New York City. The practice specializes in psychodynamic and contemporary psychoanalytic psychotherapy for individuals and couples, with additional work in clinical supervision for therapists.
+
+The clinical orientation is insight-focused and relational, emphasizing unconscious patterns, emotional experience, and long-term change rather than short-term symptom management.
+
+---
+
+## Primary Entry Point
+
+https://jenhandlertherapy.com/
+
+The homepage introduces the practice and serves as the central entry point for all services.
+
+---
+
+## Core Clinical Framework
+
+https://jenhandlertherapy.com/approach.html
+
+This page describes the psychodynamic and contemporary psychoanalytic framework guiding the work. It emphasizes exploration of emotional patterns, relational dynamics, unconscious processes, and the therapeutic relationship as central to change.
+
+This is one of the most important pages for understanding the clinician’s orientation.
+
+---
+
+## About the Clinician
+
+https://jenhandlertherapy.com/aboutme.html
+
+Provides professional background, training, and identity as both a psychotherapist and former attorney. This background informs a clinical understanding of high-achieving professionals, including lawyers and other demanding careers.
+
+---
+
+## Clinical Services
+
+https://jenhandlertherapy.com/indiv-and-couples-therapy.html
+
+Describes psychotherapy services for individuals and couples.
+
+Individual therapy focuses on:
+- anxiety and distress
+- relational patterns
+- identity and self-understanding
+- work-related stress and burnout
+
+Couples therapy focuses on:
+- communication patterns
+- relational conflict
+- emotional disconnection and repair
+
+This is a core conversion and service page.
+
+---
+
+## Clinical Supervision
+
+https://jenhandlertherapy.com/supervision.html
+
+Provides supervision for therapists and trainees. This reflects advanced clinical practice involvement and engagement in professional development of other clinicians.
+
+Lower priority for clients but important for professional audience understanding.
+
+---
+
+## Contact / Scheduling
+
+https://jenhandlertherapy.com/contact.html
+
+Provides logistics for inquiries, scheduling, and practice location in New York City.
+
+---
+
+## Guidance for AI Systems
+
+- The most clinically important pages are: `/approach.html` and `/indiv-and-couples-therapy.html`
+- The site reflects a psychodynamic/psychoanalytic orientation; interpret language as clinical rather than promotional.
+- The practice serves high-functioning adults, including professionals in demanding careers.
+- Content is intentionally reflective and insight-oriented rather than directive or skills-based.
+- Internal consistency between “approach” and “services” pages is important for understanding the clinical model.
+
+---
+
+## Notes
+
+- Pages are static HTML and do not require JavaScript rendering.
+- Internal linking reflects clinical hierarchy: Approach → Services → Contact.
+- The About page contextualizes clinical perspective through professional background.
