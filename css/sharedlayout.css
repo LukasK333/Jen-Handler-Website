@@ -21,8 +21,8 @@ body {
     font-size: 1.5em;
     line-height: 1.6em;
     color: #636363;
-    max-height: 800px;
-    overflow: hidden;
+    max-height: none !important;
+    overflow: visible !important;
     position: relative;
 }
 
@@ -31,10 +31,12 @@ body {
 }
 
 .button-div {
+    display: none !important;
     margin: 1em 0em 1em 1.95em;
 }
 
 .button-div .text-button {
+    display: none !important;
     border: none;
     background-color: var(--primary-color);
     color: #fff;
