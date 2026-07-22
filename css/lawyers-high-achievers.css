@@ -1,0 +1,128 @@
+.hero .container .hero-content .text-button-wrapper .paragraph-container {
+    overflow: visible !important;
+    max-height: none !important;
+    margin-top: 1em;
+}
+
+.office-chair-image {
+    max-width: 400px;
+    float: right;
+    padding: 0.5em 0em 0em 1em;
+}
+
+.button-div {
+    display: none !important;
+    text-align: center;
+    margin: 0.5em 0em 0em 0em;
+}
+
+.text-button {
+    display: none !important;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5em 0.8em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+@media (max-width: 860px) {
+    .hero .container .hero-content .text-button-wrapper .paragraph-container .office-chair-image {
+        float: none;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .hero .container .hero-content .text-button-wrapper {
+        clear: both;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .container .hero-content .text-button-wrapper .paragraph-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .hero .container .hero-content .text-button-wrapper .paragraph-container p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero .container .hero-content .paragraph-container {
+        margin-top: 1em;
+    }
+
+    .hero .container .hero-content .paragraph-container p {
+        font-size: 1.25em;
+    }
+
+    .hero .container .hero-content .text-button-wrapper .paragraph-container {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .button-div,
+    .text-button {
+        display: none !important;
+    }
+
+    footer {
+        position: static !important;
+    }
+
+    .hero .container .hero-content .text-button-wrapper .paragraph-container p {
+        font-size: 16px !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .container .hero-content .hero-heading span {
+        font-size: 0.8em;
+    }
+
+    .navbar .container .menu-container .menu {
+        font-size: 1.25em;
+    }
+
+    .navbar .container .menu-container .hamburger-button .hamburger-line {
+        width: 2.3em;
+        height: 0.425em;
+    }
+
+    .navbar .container .contact-button {
+        font-size: 1.2em;
+    }
+
+    .hero .container .hero-content p {
+        font-size: 13.5px !important;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    .hero .container .hero-content .office-chair-image {
+        width: 320px;
+        max-width: 320px;
+        height: auto;
+        display: block;
+        float: none;
+        margin: 0 auto 0.75em auto;
+    }
+
+    .hero .container .hero-content .text-button-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero .container .hero-content .text-button-wrapper,
+    .hero .container .hero-content .text-button-wrapper p,
+    .hero .container .hero-content .text-button-wrapper a {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+    }
+}
