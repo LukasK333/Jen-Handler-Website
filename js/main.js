@@ -1,7 +1,7 @@
 // Make sure the function is globally accessible
 window.onRecaptchaSuccess = onRecaptchaSuccess;
 
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
     const menuContainer = document.querySelector('.menu-container');
     const homeContainer = document.querySelector('.home-container');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -43,6 +43,26 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     })
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections for animation
+    const animatedSections = document.querySelectorAll('.services-overview, .about-preview');
+    animatedSections.forEach(section => {
+        observer.observe(section);
+    });
 });
 
 function toggleDropdown() {

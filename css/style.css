@@ -10,10 +10,11 @@
 }
 
 body {
-    font-family: 'Libre Franklin', sans-serif; 
+    font-family: 'Libre Franklin', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
     background: url(../images/Blank-Wall.png);
     background-size: 100% 300%; /* Put here instead of .hero section so that it covers both .hero and .aboutme sections in aboutme.html */
 }
@@ -279,9 +280,9 @@ img {
     display: flex;
 }
 
-.hero .container .transparent-couch { 
+.hero .container .transparent-couch {
     position: relative; /*image gives the container its width, and is relative to its parent container*/
-    bottom: 0;
+    bottom: 0em;
     left: 50%;
     transform: translateX(-50%);
     /* Remove any fixed width/height here - let it be responsive */
@@ -309,37 +310,180 @@ img {
     font-weight: 600;
 }
 
-/* Zencare and Psychology Today Badges */
-
-.hero .container .badges {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    bottom: 0;
-    right: 15px;
-    z-index: 5; /* to make sure badges aren't covered by anything */
-    pointer-events: auto; /* Ensure it doesn't interfere with other elements */
+.hero .container .hero-content .hero-cta {
+    text-align: center;
+    margin-top: 1.5em;
+    position: relative;
+    z-index: 10;
 }
 
-.hero .container .badges .zencare-badge {
-    width: 250px; 
-    height: 73.32px; 
+.hero .container .hero-content .hero-cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 1em 2em;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(216, 128, 91, 0.3);
+}
+
+.hero .container .hero-content .hero-cta-button:hover {
+    background-color: #b06a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(216, 128, 91, 0.4);
+}
+
+/* Zencare and Psychology Today Badges */
+
+.badges-section {
+    padding: 2em 0;
+    background: transparent;
+}
+
+.badges-section .badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.badges-section .badges .zencare-badge {
+    width: 250px;
+    height: 73.32px;
     transform: scale(0.7);
     border: none;
     display: block;
-    /* Ensure it maintains its position */
-    position: relative;
-    z-index: 5;
+}
+
+/* Services Overview Section */
+.services-overview {
+    padding: 5em 2em;
+    background: #EFEAE5;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.services-overview.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services-overview .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5em;
+    letter-spacing: 0.02em;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    letter-spacing: 0.01em;
+}
+
+.service-card p {
+    color: #636363;
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.service-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: #b06a4a;
+    text-decoration: underline;
+}
+
+/* About Preview Section */
+.about-preview {
+    padding: 5em 2em;
+    background: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-preview.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-preview .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    color: #636363;
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+
+.about-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.5em 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.about-link:hover {
+    color: #b06a4a;
+    border-bottom-color: #b06a4a;
 }
 
 /* Footer */
 footer {
-    flex-grow: 1.5; 
+    flex-grow: 1.5;
     background: var(--primary-color);
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -371,8 +515,8 @@ p a {
 }
 
 @media (max-width: 1300px) {
-    .hero .container .badges {
-        display: none;
+    .badges-section .badges {
+        transform: scale(0.9);
     }
 }
 
@@ -423,6 +567,11 @@ p a {
     .navbar .container .badges {
         transform: translateX(-50%) scale(0.9);
     }
+
+    .badges-section .badges {
+        transform: scale(0.8);
+        gap: 1.5em;
+    }
 }
 
 @media (max-width: 730px) {
@@ -438,6 +587,11 @@ p a {
 
     .navbar .container .badges {
         transform: translateX(-50%) scale(0.75);
+    }
+
+    .badges-section .badges {
+        transform: scale(0.7);
+        gap: 1em;
     }
 
     /*Below used to be at 480px*/
@@ -469,13 +623,18 @@ p a {
     .navbar .container .badges{
         transform: translateX(-50%) scale(0.65);
     }
+
+    .badges-section .badges {
+        transform: scale(0.6);
+        gap: 0.8em;
+    }
 }
 
 @media (max-width: 550px) {
     .navbar .container .menu-container .menu {
         font-size: 1.25em;
     }
-    
+
     .navbar .container .menu-container .hamburger-button .hamburger-line {
         width: 2.3em;
         height: 0.425em;
@@ -491,6 +650,15 @@ p a {
 
     .navbar .container .badges{
         transform: translateX(-50%) scale(0.55);
+    }
+
+    .badges-section .badges {
+        transform: scale(0.5);
+        gap: 0.6em;
+    }
+
+    .hero .container .hero-content .hero-cta {
+        margin-top: 1.2em;
     }
 }
 
@@ -520,10 +688,65 @@ p a {
     .hero .container .hero-content .hero-heading {
         font-size: 1.5em;
     }
+
+    .hero .container .hero-content .hero-cta {
+        margin-top: 1em;
+    }
+
+    .hero .container .hero-content .hero-cta-button {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+    }
+
+    .badges-section .badges {
+        transform: scale(0.45);
+        gap: 0.5em;
+    }
+
+    .services-overview,
+    .about-preview {
+        padding: 3em 1.5em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+
+    .service-card {
+        padding: 1.5em;
+    }
+
+    .service-card h3 {
+        font-size: 1.1em;
+    }
+
+    .about-content p {
+        font-size: 1em;
+    }
 }
 @media (max-width: 430px) {
     .navbar .container .badges {
         display: none;
+    }
+
+    .badges-section .badges {
+        transform: scale(0.4);
+        gap: 0.4em;
+    }
+
+    .hero .container .hero-content .hero-cta {
+        margin-top: 0.8em;
+    }
+
+    .hero .container .hero-content .hero-cta-button {
+        font-size: 0.9em;
+        padding: 0.7em 1.2em;
     }
 }
 
@@ -600,7 +823,7 @@ p a {
         font-size: 1.3em;
         padding-top: 0.2em;
     }
-
+}
 
 /* --- readability tweaks --- */
 .hero-content p {
@@ -613,10 +836,7 @@ p a {
 .button-div {
   display: none !important;
 }
-    .about-me .text p {
-  font-size: 13.5px;
-  line-height: 1.6;
-}
+
 .about-me .text {
   max-width: 520px;
 }
@@ -626,13 +846,89 @@ p a {
   line-height: 1.6 !important;
   margin-bottom: 1em;
 }
-    /* Mobile cleanup */
+
+/* Mobile / tablet cleanup */
 @media (max-width: 768px) {
-  article.about-me p,
-  .hero .container .hero-content p {
-    font-size: 18px !important;
-    line-height: 1.45 !important;
-    margin-bottom: 1.1em !important;
+  .navbar .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.45rem 0.75rem;
+    padding: 0.75rem 0.9rem;
+    min-height: auto;
+  }
+
+  .navbar .container .menu-container,
+  .navbar .container .home-container {
+    margin-left: 0;
+  }
+
+  .navbar .container .contact-button {
+    margin-right: 0;
+    font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+    padding: 0.4em 0.8em;
+    white-space: nowrap;
+  }
+
+  .navbar .container .badges {
+    position: static;
+    left: auto;
+    transform: none;
+    order: 3;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: 0.35rem;
+  }
+
+  .navbar .container .badges > * {
+    transform: none;
+  }
+
+  .navbar .hamburger-menu {
+    width: 100%;
+  }
+
+  .hero {
+    overflow: visible;
+    padding: 0.75rem 0 1.5rem;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .hero .container .hero-content {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    padding: 0 1rem;
+    order: 1;
+  }
+
+  .hero .container .hero-content .hero-heading {
+    padding-top: 0.6rem;
+    font-size: clamp(1.45rem, 6vw, 2rem);
+    line-height: 1.15;
+  }
+
+  .hero .container .hero-content .hero-cta {
+    margin-top: 1rem;
+  }
+
+  .hero .container .transparent-couch {
+    position: static;
+    left: auto;
+    transform: none;
+    order: 2;
+    display: block;
+    width: min(92vw, 560px);
+    max-width: 100%;
+    margin: 0.5rem auto 0;
   }
 
   .button-div,
@@ -656,5 +952,76 @@ p a {
     height: auto !important;
     display: block !important;
     margin: 0 auto 1.2em auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .container {
+    padding: 0.6rem 0.7rem;
+  }
+
+  .navbar .container .menu-container .menu {
+    font-size: 1.05rem;
+  }
+
+  .navbar .container .menu-container .hamburger-button .hamburger-line {
+    width: 2.1em;
+    height: 0.36em;
+    margin: 0.33em 0;
+  }
+
+  .navbar .container .contact-button {
+    font-size: 0.95rem;
+    padding: 0.38em 0.75em;
+  }
+
+  .navbar .container .badges {
+    display: none;
+  }
+
+  .hero .container .hero-content .hero-heading {
+    font-size: clamp(1.35rem, 7.5vw, 1.65rem);
+  }
+
+  .hero .container .hero-content .hero-cta {
+    margin-top: 0.85rem;
+  }
+
+  .hero .container .hero-content .hero-cta-button {
+    font-size: 0.95rem;
+    padding: 0.78em 1.3em;
+  }
+
+  .services-overview,
+  .about-preview {
+    padding: 3em 1.5em;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .service-card {
+    padding: 1.5em;
+  }
+
+  .service-card h3 {
+    font-size: 1.1em;
+  }
+
+  .about-content p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 360px) {
+  footer .secondp {
+    font-size: 0.8em;
   }
 }
