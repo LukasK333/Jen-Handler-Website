@@ -20,8 +20,8 @@
   --color-line: #E2D9CB;            /* hairline borders on cream */
 
   /* Type */
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-body: "Libre Franklin", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Libre Franklin", sans-serif;
+  --font-body: "Libre Franklin", sans-serif;
 
   --step--1: clamp(0.86rem, 0.82rem + 0.18vw, 0.95rem);
   --step-0:  clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
