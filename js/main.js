@@ -1,146 +1,118 @@
-// Make sure the function is globally accessible
+// Make reCAPTCHA callback globally accessible
 window.onRecaptchaSuccess = onRecaptchaSuccess;
 
 document.addEventListener('DOMContentLoaded', function () {
-    const menuContainer = document.querySelector('.menu-container');
-    const homeContainer = document.querySelector('.home-container');
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
+  /* ---------- Footer year ---------- */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    if (menuContainer) {
-        menuContainer.addEventListener('click', () => {
-            homeContainer.classList.remove('hidden');
-            hamburgerMenu.classList.remove('hidden');
-            menuContainer.classList.add('hidden');
-        })
-    }
+  /* ---------- Mobile nav toggle ---------- */
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobilePanel = document.querySelector('.mobile-panel');
 
-    if (homeContainer) {
-        homeContainer.addEventListener('click', () => {
-            menuContainer.classList.remove('hidden');
-            homeContainer.classList.add('hidden');
-            hamburgerMenu.classList.add('hidden');
-        })
-    }
-
-    // Get all navigation links on navBar
-    const navLinks = document.querySelectorAll('.navbar .hamburger-menu ul li a');
-    const clinicalServicesLink = document.getElementById('clinical-services');
-
-    // Get the current page URL
-    const currentURL = window.location.href;
-
-    // Loop through all navigation links
-    navLinks.forEach(link => {
-
-        // Check if the link's href is the current page we are on
-        if (link.href == currentURL) {
-            // Add the 'active' class to that link
-            link.classList.add('active');
-
-            // If the active link is a submenu item, also add 'active' class to "Clinical Services"
-            if (link.closest('.submenu')) {
-                clinicalServicesLink.classList.add('active');
-            }
-        }
-    })
-
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Observe sections for animation
-    const animatedSections = document.querySelectorAll('.services-overview, .about-preview');
-    animatedSections.forEach(section => {
-        observer.observe(section);
+  if (navToggle && mobilePanel) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = mobilePanel.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
+  }
+
+  /* ---------- Desktop dropdown (click/touch support alongside :hover) ---------- */
+  const dropdownToggle = document.querySelector('.nav-link-btn');
+  const dropdownParent = document.querySelector('.nav-links li.has-dropdown');
+
+  if (dropdownToggle && dropdownParent) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isOpen = dropdownParent.classList.toggle('dropdown-open');
+      dropdownToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!dropdownParent.contains(e.target)) {
+        dropdownParent.classList.remove('dropdown-open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* ---------- Active link highlighting ---------- */
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('a[data-nav-link]').forEach(function (link) {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+      const group = link.closest('[data-nav-group]');
+      if (group) {
+        const groupToggle = group.querySelector('.nav-link-btn');
+        if (groupToggle) groupToggle.classList.add('active');
+      }
+    }
+  });
+
+  /* ---------- Scroll reveal ---------- */
+  const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(function (el) {
+    observer.observe(el);
+  });
 });
 
-function toggleDropdown() {
-    const submenu = document.getElementById('submenu');
-    const arrow = document.querySelector('.arrow');
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const contactLink = document.getElementById('contact');
-    const clinicalServicesLink = document.getElementById('clinical-services');
-
-    submenu.classList.toggle('active');
-    arrow.classList.toggle('open');
-    clinicalServicesLink.classList.toggle('active'); 
-
-    if (submenu.classList.contains('active')) {
-        const submenuHeight = submenu.offsetHeight;
-        const currentMenuHeight = hamburgerMenu.offsetHeight;
-        const newMenuHeight = currentMenuHeight + submenuHeight;
-        
-        hamburgerMenu.style.height = newMenuHeight + 'px';
-    } else {
-        hamburgerMenu.style.height = '';
-        contactLink.style.marginTop = '';
-    }
-}
-
-// Add this function to handle reCAPTCHA success
+/* ---------- reCAPTCHA success handler ---------- */
 function onRecaptchaSuccess() {
-    console.log('reCAPTCHA completed');
-    
-    // Remove error styling from iframe
-    const recaptchaIframe = document.querySelector('.g-recaptcha iframe');
-    if (recaptchaIframe) {
-        recaptchaIframe.style.border = 'none';
-    }
-    
-    // Hide error message
-    const errorMessage = document.querySelector('.error-message');
-    if (errorMessage) {
-        errorMessage.style.display = 'none';
-    }
+  const recaptchaIframe = document.querySelector('.g-recaptcha iframe');
+  if (recaptchaIframe) {
+    recaptchaIframe.style.border = 'none';
+  }
+  const errorMessage = document.querySelector('.error-message');
+  if (errorMessage) {
+    errorMessage.style.display = 'none';
+  }
 }
 
-const form = document.querySelector('form');
+/* ---------- Contact form submission (Google Forms) ---------- */
+const form = document.querySelector('#contactForm');
 
 if (form) {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-    
-        const captchaResponse = grecaptcha.getResponse();
-        const recaptcha = document.querySelector('.g-recaptcha');
-        const iframe = recaptcha.querySelector('iframe');
-        const errorMessage = form.querySelector('.error-message');
-    
-        if (!captchaResponse.length > 0) {
-            console.log("Captcha not completed");
-            if (recaptcha) {
-                if (iframe) {
-                    iframe.style.border = '1px solid rgba(255, 0, 0, 0.857)';
-                    errorMessage.style.display = 'block';
-                }
-            }
-            return;
-        }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    // Submit to Google Form
+    const captchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
+    const recaptcha = document.querySelector('.g-recaptcha');
+    const iframe = recaptcha ? recaptcha.querySelector('iframe') : null;
+    const errorMessage = form.querySelector('.error-message');
+
+    if (!captchaResponse || !captchaResponse.length) {
+      if (iframe) {
+        iframe.style.border = '1px solid rgba(176, 72, 60, 0.85)';
+      }
+      if (errorMessage) {
+        errorMessage.style.display = 'block';
+      }
+      return;
+    }
+
     const fd = new FormData(e.target);
     const params = new URLSearchParams(fd);
 
     fetch('https://docs.google.com/forms/d/e/1FAIpQLSfVlTPvY-DUpcFcyEicAPTPXidQ6v4yBjZK8MUY5FOFmaH7zw/formResponse', {
-        method: "POST",
-        body: params,
-        mode: 'no-cors' // Required for Google Forms
+      method: 'POST',
+      body: params,
+      mode: 'no-cors'
     })
-        .then(() => {
-            console.log('Form submitted successfully');
-            window.location.href = 'formconfirmation.html';
-        })
-        .catch(err => console.error('Form submission error:', err));
-    });
+      .then(function () {
+        window.location.href = 'formconfirmation.html';
+      })
+      .catch(function (err) {
+        console.error('Form submission error:', err);
+      });
+  });
 }
-

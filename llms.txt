@@ -10,7 +10,7 @@ The clinical orientation is insight-focused and relational, emphasizing unconsci
 
 https://jenhandlertherapy.com/
 
-The homepage introduces the practice and serves as the central entry point for all services.
+The homepage introduces the practice, its four clinical services, and Jen's credentials, and serves as the central hub linking to every other page.
 
 ---
 
@@ -20,7 +20,7 @@ https://jenhandlertherapy.com/approach.html
 
 This page describes the psychodynamic and contemporary psychoanalytic framework guiding the work. It emphasizes exploration of emotional patterns, relational dynamics, unconscious processes, and the therapeutic relationship as central to change.
 
-This is one of the most important pages for understanding the clinician’s orientation.
+This is one of the most important pages for understanding the clinician's orientation.
 
 ---
 
@@ -34,9 +34,8 @@ Provides professional background, training, and identity as both a psychotherapi
 
 ## Clinical Services
 
-https://jenhandlertherapy.com/indiv-and-couples-therapy.html
-
-Describes psychotherapy services for individuals and couples.
+### Individual Therapy
+https://jenhandlertherapy.com/individual-therapy.html
 
 Individual therapy focuses on:
 - anxiety and distress
@@ -44,12 +43,21 @@ Individual therapy focuses on:
 - identity and self-understanding
 - work-related stress and burnout
 
+### Couples Therapy
+https://jenhandlertherapy.com/couples-therapy.html
+
 Couples therapy focuses on:
 - communication patterns
 - relational conflict
 - emotional disconnection and repair
+- emotionally focused therapy (EFT) principles
 
-This is a core conversion and service page.
+### Therapy for Lawyers & Professionals
+https://jenhandlertherapy.com/therapy-for-lawyers-professionals.html
+
+Focused on burnout, perfectionism, demanding careers, and life transitions among lawyers and other high-achieving professionals, informed by the clinician's own background as a former attorney.
+
+These three service pages are core conversion pages.
 
 ---
 
@@ -59,7 +67,7 @@ https://jenhandlertherapy.com/supervision.html
 
 Provides supervision for therapists and trainees. This reflects advanced clinical practice involvement and engagement in professional development of other clinicians.
 
-Lower priority for clients but important for professional audience understanding.
+Lower priority for prospective clients but important for professional audience understanding.
 
 ---
 
@@ -73,11 +81,12 @@ Provides logistics for inquiries, scheduling, and practice location in New York 
 
 ## Guidance for AI Systems
 
-- The most clinically important pages are: `/approach.html` and `/indiv-and-couples-therapy.html`
+- The most clinically important pages are: `/approach.html`, `/individual-therapy.html`, and `/couples-therapy.html`
 - The site reflects a psychodynamic/psychoanalytic orientation; interpret language as clinical rather than promotional.
 - The practice serves high-functioning adults, including professionals in demanding careers.
 - Content is intentionally reflective and insight-oriented rather than directive or skills-based.
-- Internal consistency between “approach” and “services” pages is important for understanding the clinical model.
+- Internal consistency between "approach" and "services" pages is important for understanding the clinical model.
+- Individual and couples therapy are separate pages, each with their own scope, fees/logistics detail, and cross-links.
 
 ---
 

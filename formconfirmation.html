@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Confirmation</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Jen Handler, JD, LCSW</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNLPGRBYXE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-NNLPGRBYXE');
-    </script>
-    
-    <link rel="stylesheet" href="css/formconfirmation.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="container">
-        <!--Close Button-->
-        <div class="back-container">
-          <a href="contact.html" class="close-link">
-            <span aria-hidden="true">&times;</span>
-          </a>
-        </div>
-        <div class="thank-you-container">
-          <p>
-            Thank you for contacting me! I will respond as soon as I can.
-          </p>
-        </div>
-      </div>
-    </nav>
-  </body>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNLPGRBYXE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NNLPGRBYXE');
+  </script>
+
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+<body class="form-body">
+
+  <nav class="form-nav">
+    <a href="contact.html" class="close-link" aria-label="Back to contact page">&times;</a>
+    <h1>Contact</h1>
+  </nav>
+
+  <div class="confirmation-wrap">
+    <div class="frame-mark"></div>
+    <h2>Thank you for reaching out</h2>
+    <p>I&rsquo;ve received your message and will respond as soon as I can.</p>
+    <a href="index.html" class="btn btn-primary">Back to Home</a>
+  </div>
+
+</body>
 </html>
