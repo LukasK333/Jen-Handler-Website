@@ -70,7 +70,7 @@
 .content-body a:not(.btn) {
   color: var(--color-terracotta);
   font-weight: 600;
-  border-bottom: 1px solid rgba(193, 101, 63, 0.35);
+  border-bottom: 1px solid rgba(216, 128, 91, 0.35);
   transition: border-color 0.2s var(--ease);
 }
 
