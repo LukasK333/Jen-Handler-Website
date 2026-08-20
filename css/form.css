@@ -104,7 +104,7 @@ form#contactForm textarea.userinput {
 
 .error-message {
   display: none;
-  color: #B0483C;
+  color: #636363;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -121,7 +121,7 @@ form#contactForm button[type="submit"] {
   color: var(--color-paper);
   cursor: pointer;
   transition: background-color 0.25s var(--ease), transform 0.25s var(--ease);
-  box-shadow: 0 10px 24px rgba(193, 101, 63, 0.28);
+  box-shadow: 0 10px 24px rgba(216, 128, 91, 0.28);
 }
 
 form#contactForm button[type="submit"]:hover {

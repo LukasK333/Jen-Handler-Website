@@ -1,22 +1,22 @@
 /* ============================================
    Design tokens — Jen Handler Psychotherapy
    Palette is drawn from the actual office: the
-   terracotta chair, the navy couch, the warm
+   terracotta chair, the gray couch, the warm
    plaster walls, the mustard throw pillow.
    ============================================ */
 
 :root {
   /* Color: grounded in real office photography */
-  --color-terracotta: #C1653F;      /* the armchair */
-  --color-terracotta-deep: #A6522F; /* hover / pressed state */
-  --color-navy: #263849;            /* the wall behind the orange chair / couch */
-  --color-navy-deep: #1B2833;
-  --color-gold: #C99A44;            /* the mustard throw pillow, used sparingly */
+  --color-terracotta: #d8805b;      /* the armchair */
+  --color-terracotta-deep: #bd6d4b; /* hover / pressed state */
+  --color-navy: #636363;            /* the wall behind the terracotta chair / couch (now gray) */
+  --color-navy-deep: #636363;
+  --color-gold: #d8805b;            /* the mustard throw pillow, used sparingly */
   --color-cream: #F6F1EA;           /* warm plaster wall */
   --color-cream-deep: #EFE7DB;
   --color-paper: #FFFDF9;           /* card surfaces */
-  --color-ink: #33302B;             /* body text, warm charcoal not pure black */
-  --color-ink-soft: #5B564E;        /* secondary text */
+  --color-ink: #636363;             /* body text, warm charcoal not pure black */
+  --color-ink-soft: #636363;        /* secondary text */
   --color-line: #E2D9CB;            /* hairline borders on cream */
 
   /* Type */
@@ -36,8 +36,8 @@
   --radius-sm: 6px;
   --radius-md: 14px;
   --radius-pill: 999px;
-  --shadow-card: 0 1px 2px rgba(38, 56, 73, 0.06), 0 8px 24px rgba(38, 56, 73, 0.08);
-  --shadow-card-hover: 0 4px 10px rgba(38, 56, 73, 0.08), 0 16px 36px rgba(38, 56, 73, 0.12);
+  --shadow-card: 0 1px 2px rgba(99, 99, 99, 0.06), 0 8px 24px rgba(99, 99, 99, 0.08);
+  --shadow-card-hover: 0 4px 10px rgba(99, 99, 99, 0.08), 0 16px 36px rgba(99, 99, 99, 0.12);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
