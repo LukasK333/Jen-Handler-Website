@@ -21,6 +21,10 @@
   margin-right: auto;
 }
 
+.hero h1 .hero-name-accent {
+  color: var(--color-terracotta);
+}
+
 .hero-dek {
   color: rgba(246, 241, 234, 0.8);
   font-family: var(--font-display);
