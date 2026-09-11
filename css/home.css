@@ -2,129 +2,91 @@
    Homepage
    ============================================ */
 
-/* ---- Hero ---- */
+/* ---- Homepage header / hero ---- */
 .hero {
-  position: relative;
-  background: url("../images/Blank-Wall.webp") center top / cover no-repeat, var(--color-cream);
-  padding: 4.5rem 1.75rem 0;
-  overflow: hidden;
+  background: var(--color-navy);
+  padding: 2.8rem 0 3.3rem;
 }
 
 .hero-inner {
-  max-width: var(--container-max);
+  max-width: 760px;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-}
-
-.hero-media-row {
-  display: grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(0, 640px) minmax(180px, 1fr);
-  gap: 1.25rem;
-  align-items: center;
-  margin: 2.5rem auto 0;
-  max-width: 1100px;
-}
-
-.hero-eyebrow {
-  font-size: var(--step--1);
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-terracotta);
-  margin-bottom: 1.1rem;
 }
 
 .hero h1 {
-  font-size: var(--step-4);
-  color: var(--color-navy);
-  max-width: 16ch;
-  margin: 0 auto;
+  color: var(--color-cream);
+  max-width: 20ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero h1 em {
-  font-style: italic;
-  color: var(--color-terracotta);
-}
-
-.hero-sub {
-  font-size: var(--step-1);
-  color: var(--color-ink-soft);
-  max-width: 46ch;
-  margin: 1.1rem auto 0;
+.hero-dek {
+  color: rgba(246, 241, 234, 0.8);
   font-family: var(--font-display);
   font-style: italic;
+  font-size: var(--step-1);
+  max-width: 54ch;
+  margin-top: 1rem;
 }
 
-.hero-ctas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.1rem;
-  margin-top: 2.1rem;
-  flex-wrap: wrap;
+.hero .btn {
+  margin-top: 1.7rem;
+}
+
+/* ---- Office photo / trust row ---- */
+.hero-photo-section {
+  background: var(--color-paper);
+  padding: 2rem 0 0;
 }
 
 .hero-figure {
-  margin-top: 0;
-  display: flex;
-  justify-content: center;
-  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 .hero-figure img {
-  width: min(640px, 100%);
-  height: auto;
-}
-
-.hero-badge {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90px;
   width: 100%;
+  height: auto;
 }
 
-.hero-badge-left {
-  justify-self: end;
-}
-
-.hero-badge-right {
-  justify-self: start;
-}
-
-.hero-badge .zencare-badge {
-  width: clamp(200px, 100%, 250px);
-  height: 73px;
-  transform: none;
-  border: none;
-}
-
-.hero-badge .sx-verified-seal {
-  position: relative;
-  display: inline-flex;
+.trust-row {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: auto;
-  min-width: 0;
-  min-height: 0;
-  background: transparent;
-  overflow: visible;
+  gap: 1.4rem;
+  padding: 1.2rem 0 0.35rem;
 }
 
-.hero-badge .sx-verified-seal iframe,
-.hero-badge .sx-verified-seal img,
-.hero-badge .sx-verified-seal svg,
-.hero-badge .sx-verified-seal > * {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain;
-  border: 0;
+.trust-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.trust-label {
+  color: var(--color-ink-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.trust-link {
+  color: var(--color-terracotta);
+  font-weight: 700;
+  font-size: var(--step--1);
+}
+
+.trust-link:hover {
+  color: var(--color-terracotta-deep);
+}
+
+.trust-divider {
+  width: 1px;
+  height: 1.4rem;
+  background: var(--color-line);
 }
 
 /* ---- Intro / About teaser ---- */
@@ -304,29 +266,6 @@
 }
 
 @media (max-width: 900px) {
-  .hero-media-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .hero-figure {
-    order: 1;
-  }
-
-  .hero-badge-left {
-    justify-self: center;
-    order: 2;
-  }
-
-  .hero-badge-right {
-    justify-self: center;
-    order: 3;
-  }
-
-  .hero-badge {
-    min-height: auto;
-  }
-
   .intro-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -349,6 +288,25 @@
 
 @media (max-width: 560px) {
   .hero {
-    padding-top: 3rem;
+    padding: 3rem 0 3.2rem;
+  }
+
+  .hero-photo-section {
+    padding-top: 1rem;
+  }
+
+  .trust-row {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+  }
+
+  .trust-item {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .trust-divider {
+    display: none;
   }
 }
