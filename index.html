@@ -140,34 +140,40 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Homepage hero / page header -->
     <section class="hero">
-      <div class="hero-inner">
-        <p class="hero-eyebrow">Psychotherapy &amp; Psychoanalysis in New York City</p>
-        <h1>Jen Handler, JD, LCSW</h1>
-        <div class="hero-ctas">
+      <div class="container">
+        <div class="hero-inner">
+          <h1>Jen Handler <span class="hero-name-accent">JD, LCSW</span></h1>
+          <p class="hero-dek">Individual &amp; Couples Therapy in New York City.</p>
           <a href="form.html" class="btn btn-primary">Book a Free Consultation</a>
-          <a href="approach.html" class="btn btn-outline">Read My Approach</a>
-        </div>
-        <div class="hero-media-row">
-          <div class="hero-badge hero-badge-left" aria-label="Zencare trust badge">
-            <iframe title="Zencare Therapist Badge" src="https://zencare.co/embed/trust-badge?z=eyJpZCI6Mjg3LCJjb2xvciI6InR1cnF1b2lzZSJ9" class="zencare-badge" loading="lazy"></iframe>
-          </div>
-          <div class="hero-figure">
-            <picture>
-              <source srcset="images/Couch.avif" type="image/avif" />
-              <source srcset="images/Couch.webp" type="image/webp" />
-              <img src="images/Couch.png" alt="Gray couch with terracotta, yellow, and grey throw pillows in Jen Handler's therapy office" width="960" height="520" />
-            </picture>
-          </div>
-          <div class="hero-badge hero-badge-right" aria-label="Psychology Today verified badge">
-            <a href="https://www.psychologytoday.com/profile/422737" class="sx-verified-seal"></a>
-            <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="422737" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzQyMjczNz9jYWxsYmFjaz1zeGNhbGxiYWNr"></script>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- Office image + trust signals -->
+    <section class="hero-photo-section">
+      <div class="container">
+        <figure class="hero-figure">
+          <picture>
+            <source srcset="images/Couch.avif" type="image/avif" />
+            <source srcset="images/Couch.webp" type="image/webp" />
+            <img src="images/Couch.png" alt="Gray couch with terracotta, yellow, and grey throw pillows in Jen Handler's therapy office" width="960" height="520" fetchpriority="high" />
+          </picture>
+        </figure>
+        <div class="trust-row" aria-label="Professional directory affiliations">
+          <div class="trust-item">
+            <span class="trust-label">Find me on</span>
+            <a href="https://zencare.co/provider/therapist/jen-handler" class="trust-link">Zencare</a>
+          </div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item">
+            <span class="trust-label">Verified on</span>
+            <a href="https://www.psychologytoday.com/profile/422737" class="trust-link">Psychology Today</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Intro / About teaser -->
     <section class="intro-section reveal">
