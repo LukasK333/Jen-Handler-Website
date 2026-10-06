@@ -81,10 +81,18 @@
   color: var(--color-terracotta);
   font-weight: 700;
   font-size: var(--step--1);
+  display: inline-flex;
+  align-items: center;
 }
 
 .trust-link:hover {
   color: var(--color-terracotta-deep);
+}
+
+.trust-badge {
+  display: block;
+  width: auto;
+  height: 2.5rem;
 }
 
 .trust-divider {
