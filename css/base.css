@@ -1,5 +1,5 @@
 /* ============================================
-   Base — reset, typography, utilities
+   Base - reset, typography, utilities
    ============================================ */
 
 * {
@@ -79,7 +79,7 @@ p + p {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
-/* Eyebrow label — small caps label above headings, used sparingly
+/* Eyebrow label - small caps label above headings, used sparingly
    to mark section identity, not decoration */
 .eyebrow {
   display: inline-flex;
@@ -197,8 +197,8 @@ textarea:focus-visible {
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Frame-corner signature — a nod to the framed art throughout
-   Jen's office photos; marks the start of a major section */
+/* Frame-corner signature - a nod to the framed art throughout
+   my office photos; marks the start of a major section */
 .frame-mark {
   width: 34px;
   height: 34px;
