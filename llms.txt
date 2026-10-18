@@ -1,6 +1,6 @@
 # Jen Handler Therapy
 
-This website represents the psychotherapy practice of Jen Handler, JD, LCSW, in New York City. The practice specializes in psychodynamic and contemporary psychoanalytic psychotherapy for individuals and couples, with additional work in clinical supervision for therapists.
+This website represents the psychotherapy practice of Jen Handler, JD, LCSW, serving clients in New York City and Connecticut. The practice specializes in psychodynamic and contemporary psychoanalytic psychotherapy for individuals and couples, with additional work in clinical supervision for therapists.
 
 The clinical orientation is insight-focused and relational, emphasizing unconscious patterns, emotional experience, and long-term change rather than short-term symptom management.
 
@@ -75,7 +75,7 @@ Lower priority for prospective clients but important for professional audience u
 
 https://jenhandlertherapy.com/contact.html
 
-Provides logistics for inquiries, scheduling, and practice location in New York City.
+Provides logistics for inquiries, scheduling, and the practice's New York City office.
 
 ---
 

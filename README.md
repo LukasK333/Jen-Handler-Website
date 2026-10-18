@@ -1,6 +1,6 @@
 # Jen Handler Therapy — Website
 
-Static HTML/CSS/JS site for Jen Handler, JD, LCSW (psychodynamic psychotherapy &amp; contemporary psychoanalysis, NYC).
+Static HTML/CSS/JS site for Jen Handler, JD, LCSW (psychodynamic psychotherapy &amp; contemporary psychoanalysis, serving clients in NYC and Connecticut).
 
 ## Structure
 
