@@ -38,7 +38,7 @@
   margin-top: 1.7rem;
 }
 
-/* ---- Office photo / trust row ---- */
+/* ---- Office photo ---- */
 .hero-photo-section {
   background: var(--color-paper);
   padding: 2rem 0 0;
@@ -54,51 +54,6 @@
 .hero-figure img {
   width: 100%;
   height: auto;
-}
-
-.trust-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.4rem;
-  padding: 1.2rem 0 0.35rem;
-}
-
-.trust-item {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.45rem;
-}
-
-.trust-label {
-  color: var(--color-ink-soft);
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.trust-link {
-  color: var(--color-terracotta);
-  font-weight: 700;
-  font-size: var(--step--1);
-  display: inline-flex;
-  align-items: center;
-}
-
-.trust-link:hover {
-  color: var(--color-terracotta-deep);
-}
-
-.trust-badge {
-  display: block;
-  width: auto;
-  height: 2.5rem;
-}
-
-.trust-divider {
-  width: 1px;
-  height: 1.4rem;
-  background: var(--color-line);
 }
 
 /* ---- Intro / About teaser ---- */
@@ -281,18 +236,4 @@
     padding-top: 1rem;
   }
 
-  .trust-row {
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    padding-top: 1rem;
-  }
-
-  .trust-item {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .trust-divider {
-    display: none;
-  }
 }
